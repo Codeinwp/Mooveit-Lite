@@ -297,7 +297,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Contact - Sidebar - Map */
-		$wp_customize->add_setting( 'ti_contact_sidebar_map', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
+		$wp_customize->add_setting( 'ti_contact_sidebar_map', array( 'sanitize_callback' => 'esc_html' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_sidebar_map', array(
 		            'label' 	=> __( 'Sidebar - Map (iframe):', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',
