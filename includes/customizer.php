@@ -384,23 +384,6 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    )
 		);
 
-	/*
-    ** Testimonials Page
-    */
-    $wp_customize->add_section( 'testimonials_page' , array(
-    	'title'       => __( 'Testimonials Page:', 'mooveit_lite' ),
-    	'priority'    => 450,
-	) );
-
-		/* 404 - Title */
-		$wp_customize->add_setting( 'ti_testimonials_numberofposts', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
-		$wp_customize->add_control( 'ti_testimonials_numberofposts', array(
-		    'label'    => __( 'Testimonials - Number of posts:', 'mooveit_lite' ),
-		    'section'  => 'testimonials_page',
-		    'settings' => 'ti_testimonials_numberofposts',
-			'priority' => '1',
-		) );
-
 }
 add_action( 'customize_register', 'mooveit_lite_customizer' );
 
