@@ -287,22 +287,13 @@ function mooveit_lite_customizer( $wp_customize ) {
     	'priority'    => 350,
 	) );
 
-		/* Contact - Sidebar - Map Title */
-		$wp_customize->add_setting( 'ti_contact_sidebar_map_title', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
-		$wp_customize->add_control( 'ti_contact_sidebar_map_title', array(
-		    'label'    => __( 'Sidebar - Map Title:', 'mooveit_lite' ),
-		    'section'  => 'movatique_contact',
-		    'settings' => 'ti_contact_sidebar_map_title',
-			'priority' => '1'
-		) );
-
 		/* Contact - Sidebar - Map */
 		$wp_customize->add_setting( 'ti_contact_sidebar_map', array( 'sanitize_callback' => 'esc_html' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_sidebar_map', array(
 		            'label' 	=> __( 'Sidebar - Map (iframe):', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',
 		            'settings' 	=> 'ti_contact_sidebar_map',
-		            'priority' 	=> '2'
+		            'priority' 	=> '1'
 		        )
 		    )
 		);
@@ -313,35 +304,19 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Sidebar - Title:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_title',
-			'priority' => '3'
+			'priority' => '2'
 		) );
 
-		/* Contact - Sidebar - Address 1 */
-		$wp_customize->add_setting( 'ti_contact_sidebar_address1', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
-		$wp_customize->add_control( 'ti_contact_sidebar_address1', array(
-		    'label'    => __( 'Sidebar - Country Address:', 'mooveit_lite' ),
-		    'section'  => 'movatique_contact',
-		    'settings' => 'ti_contact_sidebar_address1',
-			'priority' => '4'
-		) );
-
-		/* Contact - Sidebar - Address 2 */
-		$wp_customize->add_setting( 'ti_contact_sidebar_address2', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
-		$wp_customize->add_control( 'ti_contact_sidebar_address2', array(
-		    'label'    => __( 'Sidebar - City Address:', 'mooveit_lite' ),
-		    'section'  => 'movatique_contact',
-		    'settings' => 'ti_contact_sidebar_address2',
-			'priority' => '5'
-		) );
-
-		/* Contact - Sidebar - Address 3 */
-		$wp_customize->add_setting( 'ti_contact_sidebar_address3', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
-		$wp_customize->add_control( 'ti_contact_sidebar_address3', array(
-		    'label'    => __( 'Sidebar - Street Address:', 'mooveit_lite' ),
-		    'section'  => 'movatique_contact',
-		    'settings' => 'ti_contact_sidebar_address3',
-			'priority' => '6'
-		) );
+		/* Contact - Sidebar - Address */
+		$wp_customize->add_setting( 'ti_contact_sidebar_address', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text', 'default' => '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) );
+		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_sidebar_address', array(
+		            'label' 	=> __( 'Sidebar - Address:', 'mooveit_lite' ),
+		            'section' 	=> 'movatique_contact',
+		            'settings' 	=> 'ti_contact_sidebar_address',
+		            'priority' 	=> '3'
+		        )
+		    )
+		);
 
 		/* Contact - Sidebar - Content */
 		$wp_customize->add_setting( 'ti_contact_sidebar_content', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
@@ -349,7 +324,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		            'label' 	=> __( 'Sidebar - Content:', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',
 		            'settings' 	=> 'ti_contact_sidebar_content',
-		            'priority' 	=> '7'
+		            'priority' 	=> '4'
 		        )
 		    )
 		);
@@ -360,7 +335,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Sidebar - Phone:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_phone',
-			'priority' => '9'
+			'priority' => '5'
 		) );
 
 		/* Contact - Sidebar - Website */
@@ -369,7 +344,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Sidebar - Website:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_website',
-			'priority' => '11'
+			'priority' => '6'
 		) );
 
 		/* Contact - Sidebar - Email */
@@ -378,7 +353,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Sidebar - Email:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_email',
-			'priority' => '13'
+			'priority' => '7'
 		) );
 
 		/* Contact - Sidebar - Socials Title */
@@ -387,7 +362,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Sidebar - Socials Title:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_socials_title',
-			'priority' => '14'
+			'priority' => '8'
 		) );
 
 	/*

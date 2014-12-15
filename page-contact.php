@@ -28,7 +28,7 @@ get_header();
 							<div class="contact-right">
 								<div class="contact-widget">
 										<?php
-										if ( get_theme_mod( 'ti_contact_sidebar_title' ) != false ) {
+										if ( get_theme_mod( 'ti_contact_sidebar_title' ) ) {
 											echo '<div class="contact-widget-title contact-map-title">'. get_theme_mod( 'ti_contact_sidebar_map_title' ) .'</div>';
 										}
 
@@ -45,25 +45,13 @@ get_header();
 										}
 										?>
 									</div><!--/.contact-widget-title-->
-									<p>
-										<?php
-										if ( get_theme_mod( 'ti_contact_sidebar_address1' ) != false ) {
-											echo get_theme_mod( 'ti_contact_sidebar_address1' ) . '<br />';
-										}
-										?>
-
-										<?php
-										if ( get_theme_mod( 'ti_contact_sidebar_address2' ) != false ) {
-											echo get_theme_mod( 'ti_contact_sidebar_address2' ) . '<br />';
-										}
-										?>
-
-										<?php
-										if ( get_theme_mod( 'ti_contact_sidebar_address3' ) != false ) {
-											echo get_theme_mod( 'ti_contact_sidebar_address3' );
-										}
-										?>
-									</p>
+									<?php
+									if ( get_theme_mod( 'ti_contact_sidebar_address', '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) ) {
+										echo '<p>';
+										echo htmlspecialchars_decode( get_theme_mod( 'ti_contact_sidebar_address', '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) );
+										echo '</p>';
+									}
+									?>
 									<p>
 										<?php
 										if ( get_theme_mod( 'ti_contact_sidebar_content' ) != false ) {
