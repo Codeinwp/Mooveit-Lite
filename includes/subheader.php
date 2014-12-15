@@ -6,13 +6,13 @@
  */
 
 if ( is_home() ) {
-
 	if ( get_theme_mod( 'ti_header_articletitle' ) || get_theme_mod( 'ti_header_articleentry' ) || get_theme_mod( 'ti_header_articlelink' ) ) {
 		$subheader_id = 'subheader';
 	} else {
 		$subheader_id = 'no-subheader';
 	}
-
+} else {
+	$subheader_id = '';
 }
 ?>
 <section id="<?php echo $subheader_id; ?>" class="cf">
