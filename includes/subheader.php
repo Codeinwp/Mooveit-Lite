@@ -13,6 +13,8 @@ if ( is_home() ) {
 		$subheader_id = 'no-subheader';
 	}
 
+} else {
+	$subheader_id = '';
 }
 ?>
 <section id="<?php echo $subheader_id; ?>" class="cf">
