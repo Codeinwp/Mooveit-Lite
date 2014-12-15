@@ -84,26 +84,6 @@ get_header();
 										?>
 
 										<?php
-										if ( get_theme_mod( 'ti_contact_sidebar_website' ) != false ) { ?>
-
-											<span>
-												<b>
-													<?php _e( 'Website: ', 'mooveit_lite' ); ?>
-												</b>
-
-												<?php
-												if ( get_theme_mod( 'ti_contact_sidebar_website' ) != false ) {
-													echo get_theme_mod( 'ti_contact_sidebar_website' );
-												} else {
-													echo _e( ' <a href="" title="Movatique">Movatique</a>', 'mooveit_lite' );
-												}
-												?>
-											</span>
-
-										<?php }
-										?>
-
-										<?php
 										if ( get_theme_mod( 'ti_contact_sidebar_email' ) != false ) { ?>
 
 											<span>
@@ -128,13 +108,6 @@ get_header();
 									</p>
 								</div><!--/.contact-widget-->
 								<div class="contact-widget">
-									<div class="contact-widget-title">
-										<?php
-										if ( get_theme_mod( 'ti_contact_sidebar_socials_title' ) != false ) {
-											echo get_theme_mod( 'ti_contact_sidebar_socials_title' );
-										}
-										?>
-									</div><!--/.contact-widget-title-->
 									<div class="contact-socials">
 										<?php
 										if ( get_theme_mod( 'ti_header_youtube' ) != false ) { ?>

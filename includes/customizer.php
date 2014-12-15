@@ -287,10 +287,10 @@ function mooveit_lite_customizer( $wp_customize ) {
     	'priority'    => 350,
 	) );
 
-		/* Contact - Sidebar - Map */
+		/* Contact - Map */
 		$wp_customize->add_setting( 'ti_contact_sidebar_map', array( 'sanitize_callback' => 'esc_html' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_sidebar_map', array(
-		            'label' 	=> __( 'Sidebar - Map (iframe):', 'mooveit_lite' ),
+		            'label' 	=> __( 'Map (iframe):', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',
 		            'settings' 	=> 'ti_contact_sidebar_map',
 		            'priority' 	=> '1'
@@ -298,19 +298,19 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    )
 		);
 
-		/* Contact - Sidebar - Title */
+		/* Contact - Title */
 		$wp_customize->add_setting( 'ti_contact_sidebar_title', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_contact_sidebar_title', array(
-		    'label'    => __( 'Sidebar - Title:', 'mooveit_lite' ),
+		    'label'    => __( 'Title:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_title',
 			'priority' => '2'
 		) );
 
-		/* Contact - Sidebar - Address */
+		/* Contact - Address */
 		$wp_customize->add_setting( 'ti_contact_sidebar_address', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text', 'default' => '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_sidebar_address', array(
-		            'label' 	=> __( 'Sidebar - Address:', 'mooveit_lite' ),
+		            'label' 	=> __( 'Address:', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',
 		            'settings' 	=> 'ti_contact_sidebar_address',
 		            'priority' 	=> '3'
@@ -318,10 +318,10 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    )
 		);
 
-		/* Contact - Sidebar - Content */
+		/* Contact - Content */
 		$wp_customize->add_setting( 'ti_contact_sidebar_content', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_sidebar_content', array(
-		            'label' 	=> __( 'Sidebar - Content:', 'mooveit_lite' ),
+		            'label' 	=> __( 'Content:', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',
 		            'settings' 	=> 'ti_contact_sidebar_content',
 		            'priority' 	=> '4'
@@ -329,40 +329,22 @@ function mooveit_lite_customizer( $wp_customize ) {
 		    )
 		);
 
-		/* Contact - Sidebar - Phone */
+		/* Contact - Phone */
 		$wp_customize->add_setting( 'ti_contact_sidebar_phone', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_contact_sidebar_phone', array(
-		    'label'    => __( 'Sidebar - Phone:', 'mooveit_lite' ),
+		    'label'    => __( 'Phone:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_phone',
 			'priority' => '5'
 		) );
 
-		/* Contact - Sidebar - Website */
-		$wp_customize->add_setting( 'ti_contact_sidebar_website', array( 'sanitize_callback' => 'esc_url_raw' ) );
-		$wp_customize->add_control( 'ti_contact_sidebar_website', array(
-		    'label'    => __( 'Sidebar - Website:', 'mooveit_lite' ),
-		    'section'  => 'movatique_contact',
-		    'settings' => 'ti_contact_sidebar_website',
-			'priority' => '6'
-		) );
-
-		/* Contact - Sidebar - Email */
+		/* Contact - Email */
 		$wp_customize->add_setting( 'ti_contact_sidebar_email', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_contact_sidebar_email', array(
-		    'label'    => __( 'Sidebar - Email:', 'mooveit_lite' ),
+		    'label'    => __( 'Email:', 'mooveit_lite' ),
 		    'section'  => 'movatique_contact',
 		    'settings' => 'ti_contact_sidebar_email',
-			'priority' => '7'
-		) );
-
-		/* Contact - Sidebar - Socials Title */
-		$wp_customize->add_setting( 'ti_contact_sidebar_socials_title', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text' ) );
-		$wp_customize->add_control( 'ti_contact_sidebar_socials_title', array(
-		    'label'    => __( 'Sidebar - Socials Title:', 'mooveit_lite' ),
-		    'section'  => 'movatique_contact',
-		    'settings' => 'ti_contact_sidebar_socials_title',
-			'priority' => '8'
+			'priority' => '6'
 		) );
 
 	/*
