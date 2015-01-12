@@ -112,6 +112,34 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 	</article><!--/#content-article-->
 </div><!--/.wrap-->
 <div class="wrap">
+	<div id="latest-posts">
+		<div class="title-border">
+			<h3><?php _e( 'Latest Posts', 'mooveit_lite' ); ?></h3>
+		</div><!--/.title-border-->
+		<div class="latest-posts cf">
+			<?php
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post(); ?>
+
+					<div id="post-<?php the_ID(); ?>" <?php post_class( 'latest-post' ); ?>>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="latest-post-title">
+							<?php the_title(); ?>
+						</a><!--/.latest-post-title-->
+						<div class="latest-post-entry">
+							<?php the_excerpt(); ?>
+						</div><!--/.latest-post-entry-->
+					</div><!--/.latest-post-->
+
+				<?php }
+			} else {
+				echo __( 'No posts found.', 'mooveit_lite' );
+			}
+			?>
+		</div><!--/.latest-posts.cf-->
+	</div><!--/#latest-posts-->
+</div><!--/.wrap-->
+<div class="wrap">
 	<section class="content">
 		<div class="title-border">
 			<h3>

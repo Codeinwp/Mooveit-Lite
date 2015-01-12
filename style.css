@@ -30,6 +30,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 **		2.3 Features Two
 **		2.4 Testimonials
 **		2.5 Our Clients
+**    2.6 Latest Posts
 **
 **	3 - Blog
 **		3.1 Content Left
@@ -1492,6 +1493,74 @@ footer {
 /* line 1294, sass/style.scss */
 .our-clients img:first-child {
   margin-left: 0px;
+}
+
+/**
+ *  2.6 Latest Posts
+ */
+#latest-posts {
+  width: 100%;
+}
+
+#latest-posts .latest-posts {
+  width: 100%;
+  margin-top: 60px;
+}
+
+#latest-posts .latest-posts .latest-post {
+  width: 31.32%;
+  margin: 30px 0 0 3%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+}
+
+#latest-posts .latest-posts .latest-post.sticky {
+  padding-bottom: 0 !important;
+}
+
+#latest-posts .latest-posts .latest-post:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+#latest-posts .latest-posts .latest-post:nth-child(1),
+#latest-posts .latest-posts .latest-post:nth-child(2),
+#latest-posts .latest-posts .latest-post:nth-child(3) {
+  margin-top: 0;
+}
+
+#latest-posts .latest-posts .latest-post .latest-post-title {
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #192836;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  display: block;
+}
+
+#latest-posts .latest-posts .latest-post .latest-post-title:hover {
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  -ms-opacity: 0.9;
+  -o-opacity: 0.9;
+  opacity: 0.9;
+}
+
+#latest-posts .latest-posts .latest-post .latest-post-entry {
+  width: 100%;
+  font-weight: 300;
+  color: #406185;
 }
 
 /*
