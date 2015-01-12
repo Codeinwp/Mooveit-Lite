@@ -403,4 +403,19 @@ if( class_exists( 'WP_Customize_Control' ) ):
 	}
 endif;
 
+/**
+ *	Registers
+ */
+function mooveit_lite_registers() {
+	wp_register_script( 'mooveit_lite_customizer_script', get_template_directory_uri() . '/js/mooveit_lite_customizer.js', array("jquery"), '20120206', true  );
+	wp_enqueue_script( 'mooveit_lite_customizer_script' );
+	wp_localize_script( 'mooveit_lite_customizer_script', 'medica_lite_buttons', array(
+		'doc'			=> __( 'Documentation', 'medica_lite' ),
+		'pro'			=> __( 'View PRO Version', 'medica_lite' ),
+		'testimonials'	=> '<span class="sidebar-content-title">'. __( 'Testimonials', 'mooveit_lite' ) .'</span><span class="sidebar-content-description">'. __( '(available in PRO version)', 'mooveit_lite' ) .'</span>',
+		'plans'			=> '<span class="sidebar-content-title">'. __( 'Plans', 'mooveit_lite' ) .'</span><span class="sidebar-content-description">'. __( '(available in PRO version)', 'mooveit_lite' ) .'</span>'
+	) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'mooveit_lite_registers' );
+
 ?>
