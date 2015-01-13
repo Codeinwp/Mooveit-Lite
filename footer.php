@@ -6,16 +6,17 @@
  */
 ?>
 <footer>
-	<div class="footer-one cf">
-		<div class="footer-one-container cf">
-			<?php
-				if ( is_active_sidebar( 'footer_sidebar' ) ) {
-					dynamic_sidebar( 'footer_sidebar' );
-				} else {
-					echo '<span class="widget-not-active">'. __( 'The sidebar is not active.', 'mooveit_lite' ) .'</span>';
-				}
-			?>
-		</div><!--/.footer-one-container .cf-->
+	<?php
+	if ( is_active_sidebar( 'footer_sidebar' ) ) {
+
+		echo '<div class="footer-one cf">';
+		echo '<div class="footer-one-container cf">';
+		dynamic_sidebar( 'footer_sidebar' );
+		echo '</div><!--/.footer-one-container .cf-->';
+		echo '</div><!--/.footer-one .cf-->';
+
+	}
+	?>
 	</div><!--/.footer-one .cf-->
 	<div class="footer-two cf">
 		<div class="wrap">
