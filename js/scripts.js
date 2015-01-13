@@ -1,20 +1,24 @@
 /**
- *	Testimonials
+ *	Ready Function
  */
 jQuery(document).ready(function($) {
 
-	/**
-	 *	Responsive Menu
-	 */
+	// Responsive Menu
 	$('.openresponsivemenu').click(function() {
 		$('ul').toggleClass("responsivemenu");
 	});
+
+	// Masonry
+	var $container = $('.gallery');
+	$container.imagesLoaded( function(){
+		$container.masonry({
+			itemSelector : 'dl.gallery-item'
+		});
+	});
+
 });
 
-
-/**
- *	Limit Menu
- */
+// Limit Menu
 var full_width = 0;
 
 jQuery("nav ul:first > li").each(function( index ) {
