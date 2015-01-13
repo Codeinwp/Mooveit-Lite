@@ -1231,26 +1231,6 @@ footer {
 .list_carousel .testimonial-box p:first-child {
   margin-top: 0px;
 }
-/* line 1179, sass/style.scss */
-.list_carousel .testimonial-box:before {
-  content: " ";
-  width: 18px;
-  height: 16px;
-  background: url("../images/quote-testimonials-left.png") no-repeat;
-  position: absolute;
-  right: 3px;
-  bottom: 45px;
-}
-/* line 1189, sass/style.scss */
-.list_carousel .testimonial-box:after {
-  content: " ";
-  width: 18px;
-  height: 16px;
-  background: url("../images/quote-testimonials-right.png") no-repeat;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
 /* line 1199, sass/style.scss */
 .list_carousel .testimonial-box .testimonials-meta {
   width: 100%;
@@ -2434,24 +2414,6 @@ footer {
 #single .similar-articles .clearfix {
   float: none;
   clear: both;
-}
-/* line 2365, sass/style.scss */
-#single .similar-articles .similar-articles-navigation-prev {
-  width: 7px;
-  height: 17px;
-  background: url("../images/related-articles-arrow-left.png") no-repeat;
-  position: absolute;
-  top: 37px;
-  right: 4px;
-}
-/* line 2374, sass/style.scss */
-#single .similar-articles .similar-articles-navigation-next {
-  width: 7px;
-  height: 17px;
-  background: url("../images/related-articles-arrow-right.png") no-repeat;
-  position: absolute;
-  top: 37px;
-  left: 4px;
 }
 
 /* line 2385, sass/style.scss */

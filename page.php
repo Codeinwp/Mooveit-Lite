@@ -31,7 +31,7 @@ get_header();
 
 				<?php }
 		} else {
-				echo '<p>No posts found.</p>';
+				echo '<p>'. __( 'No posts found.', 'mooveit_lite' ) .'</p>';
 		}
 	?>
 </div><!--/.wrap-->
