@@ -2579,7 +2579,7 @@ footer {
   float: left;
 }
 
-.gallery-item a.fancybox {
+.gallery-item a.nivo-lightbox {
   text-decoration: none !important;
 }
 

@@ -93,6 +93,7 @@ add_action( 'after_setup_theme', 'mooveit_lite_setup' );
  */
 function mooveit_lite_wp_enqueue_style_movatique() {
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.5' );
+    wp_enqueue_style( 'nivo-lightbox', get_template_directory_uri() . '/css/nivo-lightbox.css', array(), '1.2.0' );
     wp_enqueue_style( 'font-family-archivo-narrow', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' );
     wp_enqueue_style( 'font-family-source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' );
     wp_enqueue_style( 'font-family-roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic,100italic,100' );
@@ -107,6 +108,7 @@ add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_style_movatique' );
  */
 function mooveit_lite_wp_enqueue_script_movatique() {
     wp_enqueue_script( 'masonry' );
+    wp_enqueue_script( 'nivo-lightbox.min', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array( 'jquery' ), '1.2.0', false );
     wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array( 'jquery' ), '3.7.2', false );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 
@@ -216,7 +218,7 @@ function mooveit_lite_post_gallery($output, $attr) {
         $img = wp_get_attachment_image_src($id, 'full');
 
         $output .= "<dl class='gallery-item gallery-columns-". $columns ."'>";
-        $output .= "<a href=\"{$img[0]}\" rel='post-". $post->ID ."' class=\"fancybox\" title='". $attachment->post_excerpt ."'>\n";
+        $output .= "<a href=\"{$img[0]}\" rel='post-". $post->ID ."' class=\"nivo-lightbox\" data-lightbox-gallery='" . $post->ID . "' title='". $attachment->post_excerpt ."'>\n";
         $output .= "<div class='gallery-item-thumb'><img src=\"{$img[0]}\" alt='". $attachment->post_excerpt ."' /></div>\n";
         $output .= "<div class='wp-caption-text'>";
         $output .= $attachment->post_excerpt;

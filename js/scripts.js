@@ -16,6 +16,11 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	// Nivo Lightbox
+	$(document).ready(function(){
+	    $('a.nivo-lightbox').nivoLightbox();
+	});
+
 });
 
 // Limit Menu
