@@ -17,10 +17,12 @@
 		<header class="cf">
 			<div class="wrap cf">
 				<?php
-				if ( get_header_image() != NULL ) {
+				if ( !display_header_text() ) {
+
 					echo '<a href="'. home_url() .'" title="'. get_bloginfo( 'name' ) .'" class="logo-box">';
 					echo '<img src="'. get_header_image() .'" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name' ) .'" />';
 					echo '</a><!--/.logo-box-->';
+
 				} else {
 
 					$header_textcolor = get_header_textcolor();
@@ -39,8 +41,7 @@
 					echo '</div><!--/.no-logo-box-description-->';
 					echo '</a><!--/.no-logo-box-->';
 				}
-				?>
-				<?php
+
 				if ( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) { ?>
 
 					<div class="call-us-box">
