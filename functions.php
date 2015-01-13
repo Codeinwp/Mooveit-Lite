@@ -38,6 +38,57 @@ function mooviet_lite_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'mooviet_lite_wp_title', 10, 2 );
 
 /**
+ *  Mooveit Lite Setup
+ */
+if ( !function_exists( 'mooveit_lite_setup' ) ) {
+
+    function mooveit_lite_setup() {
+
+        // Post Thumbnails
+        add_theme_support( 'post-thumbnails' );
+
+        // Automatic Feed Links
+        add_theme_support( 'automatic-feed-links' );
+
+        // Custom Header
+        $args_custom_header = array(
+            'width'         => '126',
+            'height'        => '18',
+            'flex-height'   => true,
+            'header-text'   => true,
+            'default-image' => get_template_directory_uri() . '/images/logo.png'
+        );
+        add_theme_support( "custom-header", $args_custom_header );
+
+        // Custom Background
+        $args_custom_background = array(
+            'default-color'         => '#ffffff',
+            'default-repeat'        => 'no-repeat',
+            'default-attachment'    => 'fixed'
+        );
+        add_theme_support( "custom-background", $args_custom_background );
+
+        // Title Tag
+        add_theme_support( 'title-tag' );
+
+        // The Post Thumbnail
+        the_post_thumbnail();
+
+        // Add Editor Style
+        add_editor_style();
+
+        // Header Menu
+        $header_menu_args = array(
+            'header-menu' => __( 'This menu will appear in header.', 'mooveit_lite' ),
+        );
+        register_nav_menus( $header_menu_args );
+
+    }
+
+}
+add_action( 'after_setup_theme', 'mooveit_lite_setup' );
+
+/**
  *  WP Enqueue Style
  */
 function mooveit_lite_wp_enqueue_style_movatique() {
@@ -78,53 +129,6 @@ function mooveit_lite_html5shiv( $tag, $handle, $src ) {
 add_filter( 'script_loader_tag', 'mooveit_lite_html5shiv', 10, 3 );
 
 /**
- *  Add Theme Support
- */
-add_theme_support( 'post-thumbnails' ); // Post Thumbnails
-add_theme_support( 'automatic-feed-links' ); // Automatic Feed Links
-
-$args_custom_header = array(
-    'width'         => '126',
-    'height'        => '18',
-    'flex-height'   => true,
-    'header-text'   => true,
-    'default-image' => get_template_directory_uri() . '/images/logo.png'
-);
-add_theme_support( "custom-header", $args_custom_header ); // Custom Header
-
-$args_custom_background = array(
-    'default-color'         => '#ffffff',
-    'default-repeat'        => 'no-repeat',
-    'default-attachment'    => 'fixed'
-);
-add_theme_support( "custom-background", $args_custom_background ); // Custom Background
-
-add_theme_support( 'title-tag' ); // Title Tag
-
-/**
- *  The Post Thumbnail
- */
-the_post_thumbnail();
-
-/**
- *  Add Editor Style
- */
-add_editor_style();
-
-/**
- *  Custom Navigation Menus
- */
-function mooveit_lite_custom_navigation_menus() {
-
-    $locations = array(
-        'header-menu' => __( 'This menu will appear in header.', 'mooveit_lite' ),
-    );
-    register_nav_menus( $locations );
-
-}
-add_action( 'init', 'mooveit_lite_custom_navigation_menus' );
-
-/**
  *  General Sidebar
  */
 function mooveit_lite_general_sidebar() {
@@ -141,7 +145,6 @@ function mooveit_lite_general_sidebar() {
 	register_sidebar( $args );
 
 }
-
 add_action( 'widgets_init', 'mooveit_lite_general_sidebar' );
 
 /**
@@ -161,7 +164,6 @@ function mooveit_lite_footer_sidebar() {
     register_sidebar( $args );
 
 }
-
 add_action( 'widgets_init', 'mooveit_lite_footer_sidebar' );
 
 /**
