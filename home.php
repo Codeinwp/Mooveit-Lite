@@ -21,7 +21,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			if ( get_theme_mod( 'ti_frontpage_subheader_title' ) != false ) {
 				echo get_theme_mod( 'ti_frontpage_subheader_title' );
 			} else {
-				echo _e( 'Why Choose Us?', 'mooveit_lite' );
+				echo __( 'Why Choose Us?', 'mooveit_lite' );
 			}
 			?>
 		</h3>
@@ -96,7 +96,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			if ( get_theme_mod( 'ti_frontpage_article_title' ) != false ) {
 				echo get_theme_mod( 'ti_frontpage_article_title' );
 			} else {
-				echo _e( 'About our services', 'mooveit_lite' );
+				echo __( 'About our services', 'mooveit_lite' );
 			}
 			?>
 		</h2>
@@ -105,7 +105,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			if ( get_theme_mod( 'ti_frontpage_article_content' ) != false ) {
 				echo get_theme_mod( 'ti_frontpage_article_content' );
 			} else {
-				echo _e( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.', 'mooveit_lite' );
+				echo __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.', 'mooveit_lite' );
 			}
 			?>
 		</p>
@@ -147,7 +147,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 				if ( get_theme_mod( 'ti_frontpage_ourclients_title' ) != false ) {
 					echo get_theme_mod( 'ti_frontpage_ourclients_title' );
 				} else {
-					echo _e( 'Our Clients', 'mooveit_lite' );
+					echo __( 'Our Clients', 'mooveit_lite' );
 				}
 				?>
 			</h3>

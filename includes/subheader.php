@@ -57,19 +57,19 @@ if ( is_home() ) {
 				<div class="socials-box">
 					<?php
 					if ( get_theme_mod( 'ti_header_youtube' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_youtube' ) .'" title="YouTube" class="youtube-icon"></a>';
+						echo '<a href="'. get_theme_mod( 'ti_header_youtube' ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" class="youtube-icon"></a>';
 					}
 
 					if ( get_theme_mod( 'ti_header_facebook' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_facebook' ) .'" title="Facebook" class="facebook-icon"></a>';
+						echo '<a href="'. get_theme_mod( 'ti_header_facebook' ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" class="facebook-icon"></a>';
 					}
 
 					if ( get_theme_mod( 'ti_header_googleplus' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_googleplus' ) .'" title="Google+" class="googleplus-icon"></a>';
+						echo '<a href="'. get_theme_mod( 'ti_header_googleplus' ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" class="googleplus-icon"></a>';
 					}
 
 					if ( get_theme_mod( 'ti_header_twitter' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_twitter' ) .'" title="Twitter" class="twitter-icon"></a>';
+						echo '<a href="'. get_theme_mod( 'ti_header_twitter' ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" class="twitter-icon"></a>';
 					}
 					?>
 				</div><!--/.socials-box-->
