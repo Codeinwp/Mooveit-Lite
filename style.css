@@ -333,15 +333,6 @@ path:hover {
   left: 0;
 }
 
-.subheader-wrap .subheader-car {
-  width: 262px;
-  height: 359px;
-  background: url("images/moving-image.png") no-repeat;
-  position: absolute;
-  top: 120px;
-  right: 0;
-}
-
 .subheader-wrap .subheader-wrap-content {
   width: 100%;
   margin: 90px 0;
@@ -1351,16 +1342,6 @@ footer {
   position: absolute;
   left: 3px;
   bottom: 45px;
-}
-
-.list_carousel .testimonial-box:after {
-  content: " ";
-  width: 18px;
-  height: 16px;
-  background: url("images/quote-testimonials-right.png") no-repeat;
-  position: absolute;
-  top: 0px;
-  right: 0px;
 }
 
 .list_carousel .testimonial-box .testimonials-meta {
@@ -2588,24 +2569,6 @@ footer {
 #single .similar-articles .clearfix {
   float: none;
   clear: both;
-}
-
-#single .similar-articles .similar-articles-navigation-prev {
-  width: 7px;
-  height: 17px;
-  background: url("images/related-articles-arrow-left.png") no-repeat;
-  position: absolute;
-  top: 37px;
-  left: 4px;
-}
-
-#single .similar-articles .similar-articles-navigation-next {
-  width: 7px;
-  height: 17px;
-  background: url("images/related-articles-arrow-right.png") no-repeat;
-  position: absolute;
-  top: 37px;
-  right: 4px;
 }
 
 .gallery {
