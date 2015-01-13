@@ -42,6 +42,9 @@ add_filter( 'wp_title', 'mooviet_lite_wp_title', 10, 2 );
  */
 function mooveit_lite_wp_enqueue_style_movatique() {
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.5' );
+    wp_enqueue_style( 'font-family-archivo-narrow', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' );
+    wp_enqueue_style( 'font-family-source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' );
+    wp_enqueue_style( 'font-family-roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic,100italic,100' );
     if ( is_rtl() ) {
         wp_enqueue_style( 'rtl', get_template_directory_uri() . '/css/rtl.css', array(), '1.0' );
     }
