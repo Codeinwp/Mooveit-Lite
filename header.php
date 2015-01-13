@@ -41,16 +41,16 @@
 				}
 				?>
 				<?php
-				if ( get_theme_mod( 'ti_header_subtitle' ) ) { ?>
+				if ( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) { ?>
 
 					<div class="call-us-box">
 						<?php
-						if ( get_theme_mod( 'ti_header_title' ) ) {
-	    					echo '<span>'. get_theme_mod( 'ti_header_title' ) .'</span>';
+						if ( get_theme_mod( 'mooveit_lite_header_title' ) ) {
+	    					echo '<span>'. get_theme_mod( 'mooveit_lite_header_title' ) .'</span>';
 	    				}
 
-	    				if ( get_theme_mod( 'ti_header_subtitle' ) ) {
-	    					echo '<a href="tel:'. get_theme_mod( 'ti_header_subtitle' ) .'" title="Tel: '. get_theme_mod( 'ti_header_subtitle' ) .'">'. get_theme_mod( 'ti_header_subtitle' ) .'</a>';
+	    				if ( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) {
+	    					echo '<a href="tel:'. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'" title="Tel: '. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'">'. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'</a>';
 	    				}
 						?>
 					</div><!--/.call-us-box-->

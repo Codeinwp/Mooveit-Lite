@@ -6,7 +6,7 @@
  */
 
 if ( is_home() ) {
-	if ( get_theme_mod( 'ti_header_articletitle' ) || get_theme_mod( 'ti_header_articleentry' ) || get_theme_mod( 'ti_header_articlelink' ) ) {
+	if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
 		$subheader_id = 'subheader';
 	} else {
 		$subheader_id = 'no-subheader';
@@ -20,7 +20,7 @@ if ( is_home() ) {
 		<?php
 		if ( is_home() ) {
 
-			if ( get_theme_mod( 'ti_header_articletitle' ) || get_theme_mod( 'ti_header_articleentry' ) || get_theme_mod( 'ti_header_articlelink' ) ) {
+			if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
 				echo '<div class="subheader-background">';
 				echo '</div>';
 			}
@@ -29,7 +29,7 @@ if ( is_home() ) {
 		<nav>
 			<?php
 
-			if ( ( get_theme_mod( 'ti_header_youtube' ) || get_theme_mod( 'ti_header_facebook' ) || get_theme_mod( 'ti_header_googleplus' ) || get_theme_mod( 'ti_header_twitter' ) ) == NULL ) { ?>
+			if ( ( get_theme_mod( 'mooveit_lite_header_youtube' ) || get_theme_mod( 'mooveit_lite_header_facebook' ) || get_theme_mod( 'mooveit_lite_header_googleplus' ) || get_theme_mod( 'mooveit_lite_header_twitter' ) ) == NULL ) { ?>
 
 				<style>
 					.navigation {
@@ -52,24 +52,24 @@ if ( is_home() ) {
 				)
 			);
 
-			if ( get_theme_mod( 'ti_header_youtube' ) || get_theme_mod( 'ti_header_facebook' ) || get_theme_mod( 'ti_header_googleplus' ) || get_theme_mod( 'ti_header_twitter' ) ) { ?>
+			if ( get_theme_mod( 'mooveit_lite_header_youtube' ) || get_theme_mod( 'mooveit_lite_header_facebook' ) || get_theme_mod( 'mooveit_lite_header_googleplus' ) || get_theme_mod( 'mooveit_lite_header_twitter' ) ) { ?>
 
 				<div class="socials-box">
 					<?php
-					if ( get_theme_mod( 'ti_header_youtube' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_youtube' ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" class="youtube-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_header_youtube' ) ) {
+						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_youtube' ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" class="youtube-icon"></a>';
 					}
 
-					if ( get_theme_mod( 'ti_header_facebook' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_facebook' ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" class="facebook-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_header_facebook' ) ) {
+						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_facebook' ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" class="facebook-icon"></a>';
 					}
 
-					if ( get_theme_mod( 'ti_header_googleplus' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_googleplus' ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" class="googleplus-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_header_googleplus' ) ) {
+						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_googleplus' ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" class="googleplus-icon"></a>';
 					}
 
-					if ( get_theme_mod( 'ti_header_twitter' ) ) {
-						echo '<a href="'. get_theme_mod( 'ti_header_twitter' ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" class="twitter-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_header_twitter' ) ) {
+						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_twitter' ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" class="twitter-icon"></a>';
 					}
 					?>
 				</div><!--/.socials-box-->
@@ -80,20 +80,20 @@ if ( is_home() ) {
 		<?php
 		if ( is_home() ) {
 
-			if ( get_theme_mod( 'ti_header_articletitle' ) || get_theme_mod( 'ti_header_articleentry' ) || get_theme_mod( 'ti_header_articlelink' ) ) {
+			if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
 
 				echo '<div class="subheader-wrap-content">';
 
-				if ( get_theme_mod( 'ti_header_articletitle' ) ) {
-					echo '<h3>'. get_theme_mod( 'ti_header_articletitle' ) .'</h3>';
+				if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) ) {
+					echo '<h3>'. get_theme_mod( 'mooveit_lite_header_articletitle' ) .'</h3>';
 				}
 
-				if ( get_theme_mod( 'ti_header_articleentry' ) ) {
-					echo '<p>'. get_theme_mod( 'ti_header_articleentry' ) .'</p>';
+				if ( get_theme_mod( 'mooveit_lite_header_articleentry' ) ) {
+					echo '<p>'. get_theme_mod( 'mooveit_lite_header_articleentry' ) .'</p>';
 				}
 
-				if ( get_theme_mod( 'ti_header_articlelink' ) ) {
-					echo '<a href="'. get_theme_mod( 'ti_header_articlelink' ) .'" title="'. __( 'Read More', 'mooveit_lite' ) .'">'. __( 'Read more', 'mooveit_lite' ) .'</a>';
+				if ( get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
+					echo '<a href="'. get_theme_mod( 'mooveit_lite_header_articlelink' ) .'" title="'. __( 'Read More', 'mooveit_lite' ) .'">'. __( 'Read more', 'mooveit_lite' ) .'</a>';
 				}
 
 				echo '</div><!--/.subheader-wrap-content-->';
