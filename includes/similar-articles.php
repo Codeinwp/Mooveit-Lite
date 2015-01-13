@@ -1,6 +1,6 @@
 <div class="similar-articles">
 	<div class="single-subtitle">
-		<h5><?php _e( 'Similar Articles', 'ti' ); ?></h5>
+		<h5><?php _e( 'Similar Articles', 'mooveit_lite' ); ?></h5>
 	</div><!--/.single-subtitlee-->
 	<div class="list_carousel responsive cf">
 		<div id="foo5">
@@ -38,7 +38,7 @@
 
 					<?php }
 				} else { ?>
-                	<?php _e( 'Not published any project.', 'ti' );
+                	<?php _e( 'Not published any project.', 'mooveit_lite' );
            		}
            		wp_reset_postdata();
            	?>

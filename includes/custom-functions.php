@@ -33,7 +33,7 @@ function mooveit_comments( $comment, $args, $depth ) {
         case 'trackback' :
     ?>
     <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'ti' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ti' ), ' ' ); ?></p>
+        <p><?php _e( 'Pingback:', 'mooveit_lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'mooveit_lite' ), ' ' ); ?></p>
     <?php
             break;
         default :
@@ -44,13 +44,13 @@ function mooveit_comments( $comment, $args, $depth ) {
         	<div class="comments-list-left">
         		<?php echo get_avatar( $comment, 62 ); ?>
         		<div class="comments-author-name">
-        			<?php printf( __( '%s', 'ti' ), sprintf( '%s', get_comment_author_link() ) ); ?> <?php edit_comment_link( __( 'Edit', 'ti' ), '- ' ); ?>
+        			<?php printf( __( '%s', 'mooveit_lite' ), sprintf( '%s', get_comment_author_link() ) ); ?> <?php edit_comment_link( __( 'Edit', 'mooveit_lite' ), '- ' ); ?>
         		</div><!--/div .comments-author-name-->
         		<div class="comments-author-entry">
         			<?php comment_text(); ?>
         		</div><!--/div .comments-author-entry-->
         		<?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="awaiting-moderation cf"><?php _e( 'Your comment is awaiting moderation.', 'ti' ); ?></em><br />
+                    <em class="awaiting-moderation cf"><?php _e( 'Your comment is awaiting moderation.', 'mooveit_lite' ); ?></em><br />
                 <?php endif; ?>
         	</div><!--/div .comments-list-left-->
         	<div class="comments-list-meta">

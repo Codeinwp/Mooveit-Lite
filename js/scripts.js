@@ -2,20 +2,6 @@
  *	Testimonials
  */
 jQuery(document).ready(function($) {
-	$('#foo4').carouFredSel({
-		responsive: true,
-		width: '100%',
-		scroll: 2,
-		prev: '.testimonials-navigation-prev',
-		next: '.testimonials-navigation-next',
-		items: {
-			width: 800,
-			visible: {
-				min: 1,
-				max: 6
-			}
-		}
-	});
 
 	/**
 	 *	Responsive Menu

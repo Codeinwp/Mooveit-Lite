@@ -31,7 +31,7 @@ function mooviet_lite_wp_title( $title, $sep ) {
 
     // Add a page number if necessary.
     if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'twentytwelve' ), max( $paged, $page ) );
+        $title = "$title $sep " . sprintf( __( 'Page %s', 'mooveit_lite' ), max( $paged, $page ) );
 
     return $title;
 }
@@ -42,7 +42,6 @@ add_filter( 'wp_title', 'mooviet_lite_wp_title', 10, 2 );
  */
 function mooveit_lite_wp_enqueue_style_movatique() {
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.5' );
-    wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), '1.0' );
     if ( is_rtl() ) {
         wp_enqueue_style( 'rtl', get_template_directory_uri() . '/css/rtl.css', array(), '1.0' );
     }
@@ -55,9 +54,7 @@ add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_style_movatique' );
  */
 function mooveit_lite_wp_enqueue_script_movatique() {
     wp_enqueue_script( 'jquery');
-    wp_enqueue_script( 'carouFredSel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
-    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
-    wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/jquery.masonry.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'masonry' );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
