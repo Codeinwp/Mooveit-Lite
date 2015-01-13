@@ -46,7 +46,6 @@ function mooveit_lite_wp_enqueue_style_movatique() {
         wp_enqueue_style( 'rtl', get_template_directory_uri() . '/css/rtl.css', array(), '1.0' );
     }
 }
-
 add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_style_movatique' );
 
 /**
@@ -55,12 +54,25 @@ add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_style_movatique' );
 function mooveit_lite_wp_enqueue_script_movatique() {
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'masonry' );
+    wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.2', false );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 }
-
 add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_script_movatique' );
+
+/**
+ * Load only in IE as of WP 4.1
+ */
+function mooveit_lite_html5shiv( $tag, $handle, $src ) {
+    if ( 'html5shiv' === $handle ) {
+        $tag = "<!--[if lt IE 9]>\n";
+        $tag .= "<script type='text/javascript' src='$src'></script>\n";
+        $tag .= "<![endif]-->\n";
+    }
+    return $tag;
+}
+add_filter( 'script_loader_tag', 'mooveit_lite_html5shiv', 10, 3 );
 
 /**
  *  Add Theme Support
