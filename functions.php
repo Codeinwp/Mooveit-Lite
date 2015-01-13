@@ -99,6 +99,8 @@ $args_custom_background = array(
 );
 add_theme_support( "custom-background", $args_custom_background ); // Custom Background
 
+add_theme_support( 'title-tag' ); // Title Tag
+
 /**
  *  The Post Thumbnail
  */
