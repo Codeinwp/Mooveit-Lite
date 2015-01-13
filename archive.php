@@ -11,21 +11,23 @@ get_header();
 	<div class="blog-title">
 		<h3>
 			<?php
-				$category_archive = get_the_category();
-				$author_archive = get_the_author();
-				$search_archive = get_search_query();
+			$category_archive = get_the_category();
+			$author_archive = get_the_author();
+			$search_archive = get_search_query();
 
-				if ( is_day() ) {
-					printf( __( '%s', 'mooveit_lite' ), get_the_date() );
-				} elseif ( is_month() ) {
-					printf( __( '%s', 'mooveit_lite' ), get_the_date( _x( 'F Y', '', 'mooveit_lite' ) ) );
-				} elseif ( is_year() ) {
-					printf( __( '%s.', 'mooveit_lite' ), get_the_date( _x( 'Y', '', 'mooveit_lite' ) ) );
-				} elseif ( is_category() ) {
-					echo single_cat_title();
-				} elseif ( is_author() ) {
-					echo $author_archive;
-				}
+			if ( is_day() ) {
+				printf( __( '%s', 'mooveit_lite' ), get_the_date() );
+			} else if ( is_month() ) {
+				printf( __( '%s', 'mooveit_lite' ), get_the_date( _x( 'F Y', '', 'mooveit_lite' ) ) );
+			} else if ( is_year() ) {
+				printf( __( '%s.', 'mooveit_lite' ), get_the_date( _x( 'Y', '', 'mooveit_lite' ) ) );
+			} else if ( is_category() ) {
+				echo single_cat_title();
+			} else if ( is_author() ) {
+				echo $author_archive;
+			} else if ( is_tag() ) {
+				single_tag_title();
+			}
 			?>
 		</h3>
 	</div><!--/.blog-title-->
