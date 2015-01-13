@@ -19,7 +19,7 @@
 				<?php
 				if ( !display_header_text() ) {
 
-					echo '<a href="'. home_url() .'" title="'. get_bloginfo( 'name' ) .'" class="logo-box">';
+					echo '<a href="'. esc_url( home_url() ) .'" title="'. get_bloginfo( 'name' ) .'" class="logo-box">';
 					echo '<img src="'. get_header_image() .'" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name' ) .'" />';
 					echo '</a><!--/.logo-box-->';
 
@@ -32,7 +32,7 @@
 						$header_textcolor = ' style="color: #'. $header_textcolor .';"';
 					}
 
-					echo '<a href="'. home_url() .'" title="'. get_bloginfo( 'name' ) .'" class="no-logo-box">';
+					echo '<a href="'. esc_url( home_url() ) .'" title="'. get_bloginfo( 'name' ) .'" class="no-logo-box">';
 					echo '<div class="no-logo-box-title"'. $header_textcolor .'>';
 					echo get_bloginfo( 'name' );
 					echo '</div><!--/.no-logo-box-title-->';
