@@ -31,84 +31,103 @@ function mooviet_lite_wp_title( $title, $sep ) {
 
     // Add a page number if necessary.
     if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'twentytwelve' ), max( $paged, $page ) );
+        $title = "$title $sep " . sprintf( __( 'Page %s', 'mooveit_lite' ), max( $paged, $page ) );
 
     return $title;
 }
 add_filter( 'wp_title', 'mooviet_lite_wp_title', 10, 2 );
 
 /**
+ *  Mooveit Lite Setup
+ */
+if ( !function_exists( 'mooveit_lite_setup' ) ) {
+
+    function mooveit_lite_setup() {
+
+        // Post Thumbnails
+        add_theme_support( 'post-thumbnails' );
+
+        // Automatic Feed Links
+        add_theme_support( 'automatic-feed-links' );
+
+        // Custom Header
+        $args_custom_header = array(
+            'width'         => '126',
+            'height'        => '18',
+            'flex-height'   => true,
+            'header-text'   => true,
+            'default-image' => get_template_directory_uri() . '/images/logo.png'
+        );
+        add_theme_support( "custom-header", $args_custom_header );
+
+        // Custom Background
+        $args_custom_background = array(
+            'default-color'         => '#ffffff',
+            'default-repeat'        => 'no-repeat',
+            'default-attachment'    => 'fixed'
+        );
+        add_theme_support( "custom-background", $args_custom_background );
+
+        // Title Tag
+        add_theme_support( 'title-tag' );
+
+        // The Post Thumbnail
+        the_post_thumbnail();
+
+        // Add Editor Style
+        add_editor_style();
+
+        // Header Menu
+        $header_menu_args = array(
+            'header-menu' => __( 'This menu will appear in header.', 'mooveit_lite' ),
+        );
+        register_nav_menus( $header_menu_args );
+
+    }
+
+}
+add_action( 'after_setup_theme', 'mooveit_lite_setup' );
+
+/**
  *  WP Enqueue Style
  */
 function mooveit_lite_wp_enqueue_style_movatique() {
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.5' );
-    wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), '1.0' );
+    wp_enqueue_style( 'nivo-lightbox', get_template_directory_uri() . '/css/nivo-lightbox.css', array(), '1.2.0' );
+    wp_enqueue_style( 'font-family-archivo-narrow', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' );
+    wp_enqueue_style( 'font-family-source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' );
+    wp_enqueue_style( 'font-family-roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic,100italic,100' );
     if ( is_rtl() ) {
         wp_enqueue_style( 'rtl', get_template_directory_uri() . '/css/rtl.css', array(), '1.0' );
     }
 }
-
 add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_style_movatique' );
 
 /**
  *  WP Enqueue Script Movatique
  */
 function mooveit_lite_wp_enqueue_script_movatique() {
-    wp_enqueue_script( 'jquery');
-    wp_enqueue_script( 'carouFredSel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
-    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
-    wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/jquery.masonry.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'masonry' );
+    wp_enqueue_script( 'nivo-lightbox.min', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array( 'jquery' ), '1.2.0', false );
+    wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array( 'jquery' ), '3.7.2', false );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 }
-
 add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_script_movatique' );
 
 /**
- *  Add Theme Support
+ * Load only in IE as of WP 4.1
  */
-add_theme_support( 'post-thumbnails' ); // Post Thumbnails
-add_theme_support( 'automatic-feed-links' ); // Automatic Feed Links
-
-$args_custom_header = array(
-    'width'         => '126',
-    'height'        => '18',
-    'flex-height'   => true,
-    'header-text'   => true,
-    'default-image' => get_template_directory_uri() . '/images/logo.png'
-);
-add_theme_support( "custom-header", $args_custom_header ); // Custom Header
-
-$args_custom_background = array(
-    'default-color'         => '#ffffff',
-    'default-repeat'        => 'no-repeat',
-    'default-attachment'    => 'fixed'
-);
-add_theme_support( "custom-background", $args_custom_background ); // Custom Background
-
-/**
- *  The Post Thumbnail
- */
-the_post_thumbnail();
-
-/**
- *  Add Editor Style
- */
-add_editor_style();
-
-/**
- *  Custom Navigation Menus
- */
-function mooveit_lite_custom_navigation_menus() {
-
-    $locations = array(
-        'header-menu' => __( 'This menu will appear in header.', 'mooveit_lite' ),
-    );
-    register_nav_menus( $locations );
-
+function mooveit_lite_html5shiv( $tag, $handle, $src ) {
+    if ( 'html5shiv' === $handle ) {
+        $tag = "<!--[if lt IE 9]>\n";
+        $tag .= "<script type='text/javascript' src='$src'></script>\n";
+        $tag .= "<![endif]-->\n";
+    }
+    return $tag;
 }
-add_action( 'init', 'mooveit_lite_custom_navigation_menus' );
+add_filter( 'script_loader_tag', 'mooveit_lite_html5shiv', 10, 3 );
 
 /**
  *  General Sidebar
@@ -127,7 +146,6 @@ function mooveit_lite_general_sidebar() {
 	register_sidebar( $args );
 
 }
-
 add_action( 'widgets_init', 'mooveit_lite_general_sidebar' );
 
 /**
@@ -147,7 +165,6 @@ function mooveit_lite_footer_sidebar() {
     register_sidebar( $args );
 
 }
-
 add_action( 'widgets_init', 'mooveit_lite_footer_sidebar' );
 
 /**
@@ -201,7 +218,7 @@ function mooveit_lite_post_gallery($output, $attr) {
         $img = wp_get_attachment_image_src($id, 'full');
 
         $output .= "<dl class='gallery-item gallery-columns-". $columns ."'>";
-        $output .= "<a href=\"{$img[0]}\" rel='post-". $post->ID ."' class=\"fancybox\" title='". $attachment->post_excerpt ."'>\n";
+        $output .= "<a href=\"{$img[0]}\" rel='post-". $post->ID ."' class=\"nivo-lightbox\" data-lightbox-gallery='" . $post->ID . "' title='". $attachment->post_excerpt ."'>\n";
         $output .= "<div class='gallery-item-thumb'><img src=\"{$img[0]}\" alt='". $attachment->post_excerpt ."' /></div>\n";
         $output .= "<div class='wp-caption-text'>";
         $output .= $attachment->post_excerpt;

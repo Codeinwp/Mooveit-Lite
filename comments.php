@@ -75,7 +75,7 @@ if ( post_password_required() )
             );
 
             $comment_textarea = '<textarea placeholder="Your Message... (*)" class="input-textarea" name="comment" aria-required="true"></textarea></div>';
-            comment_form( array( 'fields' => $fields, 'comment_field' => $comment_textarea, 'id_submit' => 'comments-submit-button', 'label_submit' => esc_attr__( 'Submit', 'ti' ), 'title_reply' => '<div class="single-subtitle"><h5>' . esc_attr__( 'Leave a Reply' ,'ti' ) . '</h5></div>', 'title_reply_to' => esc_attr__( 'Leave a comment to %s', 'ti' )) );
+            comment_form( array( 'fields' => $fields, 'comment_field' => $comment_textarea, 'id_submit' => 'comments-submit-button', 'label_submit' => esc_attr__( 'Submit', 'mooveit_lite' ), 'title_reply' => '<div class="single-subtitle"><h5>' . esc_attr__( 'Leave a Reply' ,'mooveit_lite' ) . '</h5></div>', 'title_reply_to' => esc_attr__( 'Leave a comment to %s', 'mooveit_lite' )) );
 
     ?>
 

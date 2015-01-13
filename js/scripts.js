@@ -1,34 +1,29 @@
 /**
- *	Testimonials
+ *	Ready Function
  */
 jQuery(document).ready(function($) {
-	$('#foo4').carouFredSel({
-		responsive: true,
-		width: '100%',
-		scroll: 2,
-		prev: '.testimonials-navigation-prev',
-		next: '.testimonials-navigation-next',
-		items: {
-			width: 800,
-			visible: {
-				min: 1,
-				max: 6
-			}
-		}
-	});
 
-	/**
-	 *	Responsive Menu
-	 */
+	// Responsive Menu
 	$('.openresponsivemenu').click(function() {
 		$('ul').toggleClass("responsivemenu");
 	});
+
+	// Masonry
+	var $container = $('.gallery');
+	$container.imagesLoaded( function(){
+		$container.masonry({
+			itemSelector : 'dl.gallery-item'
+		});
+	});
+
+	// Nivo Lightbox
+	$(document).ready(function(){
+	    $('a.nivo-lightbox').nivoLightbox();
+	});
+
 });
 
-
-/**
- *	Limit Menu
- */
+// Limit Menu
 var full_width = 0;
 
 jQuery("nav ul:first > li").each(function( index ) {
