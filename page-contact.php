@@ -48,7 +48,7 @@ get_header();
 									<?php
 									if ( get_theme_mod( 'mooveit_lite_contact_sidebar_address', '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) ) {
 										echo '<p>';
-										echo htmlspecialchars_decode( get_theme_mod( 'mooveit_lite_contact_sidebar_address', '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) );
+										echo htmlspecialchars_decode( get_theme_mod( 'mooveit_lite_contact_sidebar_address', __( '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.', 'mooveit_lite' ) ) );
 										echo '</p>';
 									}
 									?>
