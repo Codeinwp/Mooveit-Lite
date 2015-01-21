@@ -21,7 +21,7 @@
 	<div class="footer-two cf">
 		<div class="wrap">
 			<p>
-				<?php _e( 'Copyright &copy;', 'mooveit_lite' ); ?> <a href="<?php echo esc_url( home_url() ); ?>" title="<?php _e( 'Mooveit Lite', 'mooveit_lite' ); ?>"><?php _e( 'Mooveit Lite', 'mooveit_lite' ); ?></a> <?php _e( 'is proudly powered by', 'mooveit_lite' ); ?> <a href="http://www.wordpress.org" title="<?php _e( 'WordPress', 'mooveit_lite' ); ?>" target="_blank"><?php _e( 'WordPress', 'mooveit_lite' ); ?></a><?php _e( '.', 'mooveit_lite' ); ?>
+				<?php _e( 'Copyright &copy;' ); ?> <a href="<?php echo esc_url( home_url() ) ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a> <?php _e( '| Proudly powered by', 'mooveit_lite' ); ?> <a href="http://www.wordpress.org" title="<?php _e( 'WordPress', 'mooveit_lite' ); ?>" target="_blank"><?php _e( 'WordPress', 'mooveit_lite' ); ?></a>
 			</p>
 		</div><!--/.wrap-->
 	</div><!--/.footer-two-->
