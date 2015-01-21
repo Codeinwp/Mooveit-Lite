@@ -21,6 +21,12 @@ jQuery(document).ready(function($) {
 	    $('a.nivo-lightbox').nivoLightbox();
 	});
 
+	// Match Height
+	var byRow = $('body').hasClass('matchheight');
+    $('.latest-posts').each(function() {
+        $(this).children('.latest-post').matchHeight(byRow);
+    });
+
 });
 
 // Limit Menu

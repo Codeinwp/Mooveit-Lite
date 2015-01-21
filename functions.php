@@ -111,8 +111,9 @@ add_action( 'wp_enqueue_scripts', 'mooveit_lite_wp_enqueue_style' );
  */
 function mooveit_lite_wp_enqueue_script() {
     wp_enqueue_script( 'masonry' );
-    wp_enqueue_script( 'nivo-lightbox.min', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array( 'jquery' ), '1.2.0', false );
-    wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array( 'jquery' ), '3.7.2', false );
+    wp_enqueue_script( 'jquery.matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight.js', array( 'jquery' ), '0.5.2', true );
+    wp_enqueue_script( 'nivo-lightbox.min', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array( 'jquery' ), '1.2.0', true );
+    wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array( 'jquery' ), '3.7.2', true );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
