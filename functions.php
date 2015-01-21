@@ -44,6 +44,9 @@ if ( !function_exists( 'mooveit_lite_setup' ) ) {
 
     function mooveit_lite_setup() {
 
+        // Load Theme Textdomain
+        load_theme_textdomain( 'mooveit_lite', get_template_directory_uri() .'/languages' );
+
         // Post Thumbnails
         add_theme_support( 'post-thumbnails' );
 
