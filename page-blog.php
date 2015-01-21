@@ -13,7 +13,14 @@ get_header();
 	<div class="blog-title">
 		<h3><?php _e( 'Our New Blog', 'mooveit_lite' ); ?></h3>
 	</div><!--/.blog-title-->
-	<div class="content-left">
+	<?php
+	if ( !is_active_sidebar( 'general_sidebar' ) ) {
+		$contentleft_class = 'content-left content-left-fullwidth';
+	} else {
+		$contentleft_class = 'content-left';
+	}
+	?>
+	<div class="<?php echo $contentleft_class; ?>">
 		<?php
 
 			$args = array (

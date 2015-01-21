@@ -1529,6 +1529,10 @@ footer {
   float: left;
 }
 
+.content-left.content-left-fullwidth {
+  width: 100%;
+}
+
 .content-left article {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
