@@ -31,9 +31,8 @@ jQuery(document).ready(function($) {
 
 // Limit Menu
 var full_width = 0;
-
 jQuery("nav ul:first > li").each(function( index ) {
-	if((jQuery(this).width() + full_width) > 600) {
+	if((jQuery(this).width() + full_width) > 730) {
 		jQuery(this).remove();
 	}
 	full_width = full_width + jQuery(this).width();
