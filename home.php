@@ -25,7 +25,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			}
 			?>
 		</h3>
-		<div class="features-two-container">
+		<div class="features-two-container cf">
 			<div class="features-box">
 				<div class="features-box-icon">
 				</div><!--/.features-box-icon-->
@@ -77,7 +77,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 				}
 				?>
 			</div><!--/.features-box-->
-		</div><!--/.features-two-container-->
+		</div><!--/.features-two-container.cf-->
 	</div><!--/.wrap-->
 </section><!--/#features-two-->
 <div class="wrap">
