@@ -19,7 +19,7 @@
 				if ( !display_header_text() ) {
 
 					echo '<a href="'. esc_url( home_url() ) .'" title="'. get_bloginfo( 'name' ) .'" class="logo-box">';
-					echo '<img src="'. get_header_image() .'" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name' ) .'" />';
+					echo '<img src="'. esc_url( get_header_image() ) .'" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name' ) .'" />';
 					echo '</a><!--/.logo-box-->';
 
 				} else {
@@ -46,11 +46,11 @@
 					<div class="call-us-box">
 						<?php
 						if ( get_theme_mod( 'mooveit_lite_header_title' ) ) {
-	    					echo '<span>'. get_theme_mod( 'mooveit_lite_header_title' ) .'</span>';
+	    					echo '<span>'. esc_attr( get_theme_mod( 'mooveit_lite_header_title' ) ) .'</span>';
 	    				}
 
 	    				if ( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) {
-	    					echo '<a href="tel:'. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'" title="Tel: '. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'">'. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'</a>';
+	    					echo '<a href="tel:'. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'" title="Tel: '. esc_attr( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) .'">'. esc_attr( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) .'</a>';
 	    				}
 						?>
 					</div><!--/.call-us-box-->
