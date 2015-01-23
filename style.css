@@ -3,10 +3,10 @@ Theme Name: Mooveit Lite
 Theme URI: https://themeisle.com/themes/mooveit-lite
 Author: ThemeIsle
 Author URI: https://www.themeisle.com
-Description: Mooveit Lite is free moving company WordPress theme.
+Description: Mooveit Lite is a free responsive WordPress Theme.
 License: GNU General Public License version 3
 License URI: license.txt
-Tags: white, yellow, light, two-columns, right-sidebar, custom-menu, featured-images, sticky-post, translation-ready
+Tags: right-sidebar, custom-index, custom-header, rtl-language-support, sticky-post, translation-ready, light
 Text Domain: mooveit_lite
 Version: 1.0.1
 
@@ -401,8 +401,8 @@ nav .navigation li {
 
 nav .navigation li a {
   /* height: 60px; */
-  line-height: 60px;
-  padding: 0 35px;
+  /* line-height: 60px; */
+  padding: 21px 35px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -731,10 +731,16 @@ footer {
   width: 302px;
   margin-bottom: 30px;
   margin-left: 29px;
+  padding: 0 29px;
   float: left;
   color: #7198b2;
   font-weight: 300;
   font-size: 14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .footer-one-widget:nth-child(1) {
@@ -1218,6 +1224,7 @@ footer {
 #features-two .features-two-container {
   width: 100%;
   margin-top: 30px;
+  /*
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -1226,6 +1233,7 @@ footer {
   display: flex;
   align-items: left;
   justify-content: space-between;
+  */
 }
 
 #features-two .h3-no-contact-form {
@@ -1527,6 +1535,10 @@ footer {
   width: 634px;
   margin: 60px 0;
   float: left;
+}
+
+.content-left.content-left-fullwidth {
+  width: 100%;
 }
 
 .content-left article {
@@ -4222,6 +4234,9 @@ input[type="submit"]:hover {
     padding: 10px 0;
     line-height: 16px;
   }
+  .socials-box {
+    width: 140px;
+  }
 
 }
 
@@ -4355,6 +4370,27 @@ input[type="submit"]:hover {
   footer .footer-one .footer-one-widget #calendar_wrap table {
     width: 100% !important;
   }
+  #features-two {
+    padding-bottom: 0;
+  }
+  #features-two .features-box {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #features-two .features-box:first-child {
+    margin-bottom: 0;
+  }
+  #latest-posts .latest-posts .latest-post,
+  #latest-posts .latest-posts .latest-post:nth-child(2),
+  #latest-posts .latest-posts .latest-post:nth-child(3) {
+    width: 100%;
+    height: auto !important;
+    margin-top: 60px;
+    margin-left: 0;
+  }
+  .our-clients img {
+    max-width: 10%;
+  }
 
 }
 
@@ -4415,15 +4451,16 @@ input[type="submit"]:hover {
   }
   #subheader-no-contact-form nav .responsivemenu li {
     width: 100%;
-    paddin-left: 0;
+    padding-left: 0;
   }
   #subheader-no-contact-form nav .responsivemenu li:first-child {
     margin-top: 14px;
   }
-  #subheader-no-contact-form nav .responsivemenu li a {
+  #subheader-no-contact-form nav .responsivemenu li a,
+  .responsivemenu li a {
     height: 40px;
     line-height: 40px;
-    padding: 0 65px;
+    padding: 0 20px;
     border-top: 1px solid #ccc;
   }
   #subheader-no-contact-form nav .responsivemenu li a:hover {
@@ -4464,63 +4501,72 @@ input[type="submit"]:hover {
   #subheader .subheader-widget .subheader-form-right textarea {
     width: 100%;
   }
-  #subheader .openresponsivemenu {
+  #subheader .openresponsivemenu,
+  .openresponsivemenu {
     width: 32px;
     height: 32px;
     margin: 13px 0 0 20px;
-    display: block;
+    display: block !important;
     cursor: pointer;
     fill: #fff;
     position: relative;
     z-index: 9999;
     float: left;
   }
-  #subheader nav .navigation {
+  #subheader nav .navigation,
+  nav .navigation {
     display: none;
   }
-  #subheader nav .responsivemenu {
+  nav .responsivemenu {
     width: 100%;
     display: block !important;
   }
-  #subheader nav .responsivemenu .menu-item-has-children {
+  nav .responsivemenu .menu-item-has-children {
     background: none;
   }
-  #subheader nav .responsivemenu li {
-    width: 100%;
-    paddin-left: 0;
+  nav .responsivemenu ul {
+    width: 100% !important;
   }
-  #subheader nav .responsivemenu li:first-child {
+  nav .responsivemenu li {
+    width: 100%;
+    padding-left: 0;
+  }
+  nav .responsivemenu li:first-child {
     margin-top: 14px;
   }
-  #subheader nav .responsivemenu li a {
+  nav .responsivemenu li a {
     height: 40px;
     line-height: 40px;
-    padding: 0 65px;
+    padding: 0 20px;
     border-top: 1px solid #ccc;
   }
-  #subheader nav .responsivemenu li a:hover {
+  nav .responsivemenu li a:hover {
     background: #ccc;
   }
-  #subheader nav .responsivemenu li ul {
+  nav .responsivemenu li ul {
     position: initial;
     display: block;
   }
-  #subheader nav .responsivemenu li ul li {
+  nav .responsivemenu li ul li {
     background: #061a31 !important;
     border-bottom: none;
   }
-  #subheader nav .responsivemenu li ul li:first-child {
+  nav .responsivemenu li ul li:first-child {
     margin-top: 0;
   }
-  #subheader nav .responsivemenu li ul li a {
-    padding: 0 65px;
+  nav .responsivemenu li ul li a {
+    padding: 0 20px;
     color: #ccc;
   }
-  #subheader nav .responsivemenu li ul li a:hover {
+  nav .responsivemenu li ul li a:hover {
     color: #fff;
   }
   .content .our-clients img {
+    margin-left: 20px;
     margin-bottom: 10px;
+  }
+  .content .our-clients img:first-child {
+    margin-left: 0;
   }
   .content .pricing-column {
     width: 24.68%;

@@ -31,7 +31,14 @@ get_header();
 			?>
 		</h3>
 	</div><!--/.blog-title-->
-	<div class="content-left">
+	<?php
+	if ( !is_active_sidebar( 'general_sidebar' ) ) {
+		$contentleft_class = 'content-left content-left-fullwidth';
+	} else {
+		$contentleft_class = 'content-left';
+	}
+	?>
+	<div class="<?php echo $contentleft_class; ?>">
 		<?php
 
 			if ( have_posts() ) {
