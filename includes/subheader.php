@@ -57,19 +57,19 @@ if ( is_home() ) {
 				<div class="socials-box">
 					<?php
 					if ( get_theme_mod( 'mooveit_lite_header_youtube' ) ) {
-						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_youtube' ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" class="youtube-icon"></a>';
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_youtube' ) ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" class="youtube-icon"></a>';
 					}
 
 					if ( get_theme_mod( 'mooveit_lite_header_facebook' ) ) {
-						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_facebook' ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" class="facebook-icon"></a>';
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_facebook' ) ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" class="facebook-icon"></a>';
 					}
 
 					if ( get_theme_mod( 'mooveit_lite_header_googleplus' ) ) {
-						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_googleplus' ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" class="googleplus-icon"></a>';
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_googleplus' ) ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" class="googleplus-icon"></a>';
 					}
 
 					if ( get_theme_mod( 'mooveit_lite_header_twitter' ) ) {
-						echo '<a href="'. get_theme_mod( 'mooveit_lite_header_twitter' ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" class="twitter-icon"></a>';
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_twitter' ) ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" class="twitter-icon"></a>';
 					}
 					?>
 				</div><!--/.socials-box-->
@@ -93,7 +93,7 @@ if ( is_home() ) {
 				}
 
 				if ( get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
-					echo '<a href="'. get_theme_mod( 'mooveit_lite_header_articlelink' ) .'" title="'. __( 'Read More', 'mooveit_lite' ) .'">'. __( 'Read more', 'mooveit_lite' ) .'</a>';
+					echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_articlelink' ) ) .'" title="'. __( 'Read More', 'mooveit_lite' ) .'">'. __( 'Read more', 'mooveit_lite' ) .'</a>';
 				}
 
 				echo '</div><!--/.subheader-wrap-content-->';

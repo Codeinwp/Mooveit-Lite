@@ -20,7 +20,9 @@ The exceptions to this license are as follows:
     License under GPL-2.0 or later license.
 
 * Icomoon
-	https://icomoon.io/
+	Copyright (C) IcoMoon App (http://icomoon.io/) & Keyamoon
+	License – GPL
+
 
 * js/html5shiv.js
 	Copyright (C) Copyright (c) 2014 Alexander Farkas (aFarkas)
@@ -51,3 +53,8 @@ The exceptions to this license are as follows:
 	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+* js/jquery.matchHeight.js
+	Copyright (c) 2014 liabru
+	http://brm.io/jquery-match-height/
+	jquery.matchHeight.js is licensed under The MIT License (MIT)

@@ -69,9 +69,9 @@ if ( post_password_required() )
                 $url = '';
 
             $fields =  array(
-                'author' => '<div class="respond"><input class="input-full" placeholder="Full name (*)" name="author" type="text" value="' . $name . '" ' . $aria_req . ' />',
-                'email'  => '<input class="input-small-left" placeholder="E-mail address (*)" name="email" type="email" value="' . $email . '" ' . $aria_req . ' />',
-                'url'    => '<input class="input-small-right" placeholder="Website URL" name="url" type="url" value="' . $url . '" />'
+                'author' => '<div class="respond"><input class="input-full" placeholder="'. __( 'Full name (*)', 'mooveit_lite' ) .'" name="author" type="text" value="' . $name . '" ' . $aria_req . ' />',
+                'email'  => '<input class="input-small-left" placeholder="'. __( 'E-mail address (*)', 'mooveit_lite' ) .'" name="email" type="email" value="' . $email . '" ' . $aria_req . ' />',
+                'url'    => '<input class="input-small-right" placeholder="'. __( 'Website URL', 'mooveit_lite' ) .'" name="url" type="url" value="' . $url . '" />'
             );
 
             $comment_textarea = '<textarea placeholder="Your Message... (*)" class="input-textarea" name="comment" aria-required="true"></textarea></div>';

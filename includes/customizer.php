@@ -308,7 +308,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Contact - Address */
-		$wp_customize->add_setting( 'mooveit_lite_contact_sidebar_address', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text', 'default' => '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.' ) );
+		$wp_customize->add_setting( 'mooveit_lite_contact_sidebar_address', array( 'sanitize_callback' => 'mooveit_lite_sanitize_callback_text', 'default' => __( '228 Park Ave S,<br />New York,</br>NY 10003-1502,<br />U.S.A.', 'mooveit_lite' ) ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'mooveit_lite_contact_sidebar_address', array(
 		            'label' 	=> __( 'Address:', 'mooveit_lite' ),
 		            'section' 	=> 'movatique_contact',

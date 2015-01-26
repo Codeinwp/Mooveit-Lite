@@ -19,19 +19,19 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 		<h3 <?php echo $h3_class; ?>>
 			<?php
 			if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_title' ) != false ) {
-				echo get_theme_mod( 'mooveit_lite_frontpage_subheader_title' );
+				echo esc_attr( get_theme_mod( 'mooveit_lite_frontpage_subheader_title' ) );
 			} else {
 				echo __( 'Why Choose Us?', 'mooveit_lite' );
 			}
 			?>
 		</h3>
-		<div class="features-two-container">
+		<div class="features-two-container cf">
 			<div class="features-box">
 				<div class="features-box-icon">
 				</div><!--/.features-box-icon-->
 				<?php
 				if ( get_theme_mod( 'mooveit_lite_frontpage_firstlybox_title' ) ) {
-					echo '<h4>'. get_theme_mod( 'mooveit_lite_frontpage_firstlybox_title' ) .'</h4>';
+					echo '<h4>'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_firstlybox_title' ) ) .'</h4>';
 				} else {
 					echo '<h4>'. __( 'Title one', 'mooveit_lite' ) .'</h4>';
 				}
@@ -48,7 +48,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 				</div><!--/.features-box-icon-->
 				<?php
 				if ( get_theme_mod( 'mooveit_lite_frontpage_secondlybox_title' ) ) {
-					echo '<h4>'. get_theme_mod( 'mooveit_lite_frontpage_secondlybox_title' ) .'</h4>';
+					echo '<h4>'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_secondlybox_title' ) ) .'</h4>';
 				} else {
 					echo '<h4>'. __( 'Title two', 'mooveit_lite' ) .'</h4>';
 				}
@@ -65,7 +65,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 				</div><!--/.features-box-icon-->
 				<?php
 				if ( get_theme_mod( 'mooveit_lite_frontpage_thirdlybox_title' ) ) {
-					echo '<h4>'. get_theme_mod( 'mooveit_lite_frontpage_thirdlybox_title' ) .'</h4>';
+					echo '<h4>'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_thirdlybox_title' ) ) .'</h4>';
 				} else {
 					echo '<h4>'. __( 'Title two', 'mooveit_lite' ) .'</h4>';
 				}
@@ -77,7 +77,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 				}
 				?>
 			</div><!--/.features-box-->
-		</div><!--/.features-two-container-->
+		</div><!--/.features-two-container.cf-->
 	</div><!--/.wrap-->
 </section><!--/#features-two-->
 <div class="wrap">
@@ -85,16 +85,16 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 		<div class="content-article-image">
 			<?php
 			if ( get_theme_mod( 'mooveit_lite_frontpage_article_image' ) ) {
-				echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_article_image' ) .'" alt="'. get_theme_mod( 'mooveit_lite_frontpage_article_title' ) .'" title="'. get_theme_mod( 'mooveit_lite_frontpage_article_title' ) .'" />';
+				echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_article_image' ) ) .'" alt="'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_article_title' ) ) .'" title="'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_article_title' ) ) .'" />';
 			} else {
-				echo '<img src="'. get_template_directory_uri() .'/images/index-article-image.png" alt="'. get_theme_mod( 'mooveit_lite_frontpage_article_title' ) .'" title="'. get_theme_mod( 'mooveit_lite_frontpage_article_title' ) .'" />';
+				echo '<img src="'. get_template_directory_uri() .'/images/index-article-image.png" alt="'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_article_title' ) ) .'" title="'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_article_title' ) ) .'" />';
 			}
 			?>
 		</div><!--/.content-article-image-->
 		<h2>
 			<?php
 			if ( get_theme_mod( 'mooveit_lite_frontpage_article_title' ) != false ) {
-				echo get_theme_mod( 'mooveit_lite_frontpage_article_title' );
+				echo esc_attr( get_theme_mod( 'mooveit_lite_frontpage_article_title' ) );
 			} else {
 				echo __( 'About our services', 'mooveit_lite' );
 			}
@@ -145,7 +145,7 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			<h3>
 				<?php
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_title' ) != false ) {
-					echo get_theme_mod( 'mooveit_lite_frontpage_ourclients_title' );
+					echo esc_attr( get_theme_mod( 'mooveit_lite_frontpage_ourclients_title' ) );
 				} else {
 					echo __( 'Our Clients', 'mooveit_lite' );
 				}
@@ -157,22 +157,22 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) ) {
 
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) ) {
-					echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) .'" title="'. __( 'Logo 1', 'mooveit_lite' ) .'" alt="'. __( 'Logo 1', 'mooveit_lite' ) .'" />';
+					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) ) .'" title="'. __( 'Logo 1', 'mooveit_lite' ) .'" alt="'. __( 'Logo 1', 'mooveit_lite' ) .'" />';
 				}
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo2' ) ) {
-					echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo2' ) .'" title="'. __( 'Logo 2', 'mooveit_lite' ) .'" alt="'. __( 'Logo 2', 'mooveit_lite' ) .'" />';
+					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo2' ) ) .'" title="'. __( 'Logo 2', 'mooveit_lite' ) .'" alt="'. __( 'Logo 2', 'mooveit_lite' ) .'" />';
 				}
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo3' ) ) {
-					echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo3' ) .'" title="'. __( 'Logo 3', 'mooveit_lite' ) .'" alt="'. __( 'Logo 3', 'mooveit_lite' ) .'" />';
+					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo3' ) ) .'" title="'. __( 'Logo 3', 'mooveit_lite' ) .'" alt="'. __( 'Logo 3', 'mooveit_lite' ) .'" />';
 				}
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo4' ) ) {
-					echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo4' ) .'" title="'. __( 'Logo 4', 'mooveit_lite' ) .'" alt="'. __( 'Logo 4', 'mooveit_lite' ) .'" />';
+					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo4' ) ) .'" title="'. __( 'Logo 4', 'mooveit_lite' ) .'" alt="'. __( 'Logo 4', 'mooveit_lite' ) .'" />';
 				}
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo5' ) ) {
-					echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo5' ) .'" title="'. __( 'Logo 5', 'mooveit_lite' ) .'" alt="'. __( 'Logo 5', 'mooveit_lite' ) .'" />';
+					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo5' ) ) .'" title="'. __( 'Logo 5', 'mooveit_lite' ) .'" alt="'. __( 'Logo 5', 'mooveit_lite' ) .'" />';
 				}
 				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo6' ) ) {
-					echo '<img src="'. get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo6' ) .'" title="'. __( 'Logo 6', 'mooveit_lite' ) .'" alt="'. __( 'Logo 6', 'mooveit_lite' ) .'" />';
+					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo6' ) ) .'" title="'. __( 'Logo 6', 'mooveit_lite' ) .'" alt="'. __( 'Logo 6', 'mooveit_lite' ) .'" />';
 				}
 
 			} else {
