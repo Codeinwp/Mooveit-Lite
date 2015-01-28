@@ -38,6 +38,18 @@ function mooviet_lite_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'mooviet_lite_wp_title', 10, 2 );
 
 /**
+ *  Render Title
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+    function mooveit_lite_render_title() {
+?>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php
+    }
+    add_action( 'wp_head', 'mooveit_lite_render_title' );
+}
+
+/**
  *  Mooveit Lite Setup
  */
 if ( !function_exists( 'mooveit_lite_setup' ) ) {
