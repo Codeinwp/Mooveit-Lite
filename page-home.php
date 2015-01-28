@@ -1,5 +1,7 @@
 <?php
 /**
+ *	Template name: Home
+ *
  * 	The template for displaying Front Page.
  *
  * 	@package ThemeIsle
@@ -118,9 +120,14 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 		</div><!--/.title-border-->
 		<div class="latest-posts cf">
 			<?php
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post(); ?>
+			$args = array (
+				'post_type'	=> 'post',
+			);
+			$wp_query = new WP_Query( $args );
+
+			if ( $wp_query->have_posts() ) {
+				while ( $wp_query->have_posts() ) {
+					$wp_query->the_post(); ?>
 
 					<div id="post-<?php the_ID(); ?>" <?php post_class( 'latest-post' ); ?>>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="latest-post-title">
@@ -135,58 +142,9 @@ if ( !get_theme_mod( 'ti_header_contactform7_shortcode' ) ) {
 			} else {
 				echo __( 'No posts found.', 'mooveit_lite' );
 			}
+			wp_reset_postdata();
 			?>
 		</div><!--/.latest-posts.cf-->
 	</div><!--/#latest-posts-->
-</div><!--/.wrap-->
-<div class="wrap">
-	<section class="content">
-		<div class="title-border">
-			<h3>
-				<?php
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_title' ) != false ) {
-					echo esc_attr( get_theme_mod( 'mooveit_lite_frontpage_ourclients_title' ) );
-				} else {
-					echo __( 'Our Clients', 'mooveit_lite' );
-				}
-				?>
-			</h3>
-		</div><!--/.title-border-->
-		<div class="our-clients">
-			<?php
-			if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) ) {
-
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) ) {
-					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo1' ) ) .'" title="'. __( 'Logo 1', 'mooveit_lite' ) .'" alt="'. __( 'Logo 1', 'mooveit_lite' ) .'" />';
-				}
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo2' ) ) {
-					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo2' ) ) .'" title="'. __( 'Logo 2', 'mooveit_lite' ) .'" alt="'. __( 'Logo 2', 'mooveit_lite' ) .'" />';
-				}
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo3' ) ) {
-					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo3' ) ) .'" title="'. __( 'Logo 3', 'mooveit_lite' ) .'" alt="'. __( 'Logo 3', 'mooveit_lite' ) .'" />';
-				}
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo4' ) ) {
-					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo4' ) ) .'" title="'. __( 'Logo 4', 'mooveit_lite' ) .'" alt="'. __( 'Logo 4', 'mooveit_lite' ) .'" />';
-				}
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo5' ) ) {
-					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo5' ) ) .'" title="'. __( 'Logo 5', 'mooveit_lite' ) .'" alt="'. __( 'Logo 5', 'mooveit_lite' ) .'" />';
-				}
-				if ( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo6' ) ) {
-					echo '<img src="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_ourclients_logo6' ) ) .'" title="'. __( 'Logo 6', 'mooveit_lite' ) .'" alt="'. __( 'Logo 6', 'mooveit_lite' ) .'" />';
-				}
-
-			} else {
-
-				echo '<img src="'. get_template_directory_uri() .'/images/clients-default.png" title="'. __( 'Logo 1', 'mooveit_lite' ) .'" alt="'. __( 'Logo 1', 'mooveit_lite' ) .'" />';
-				echo '<img src="'. get_template_directory_uri() .'/images/clients-default.png" title="'. __( 'Logo 2', 'mooveit_lite' ) .'" alt="'. __( 'Logo 2', 'mooveit_lite' ) .'" />';
-				echo '<img src="'. get_template_directory_uri() .'/images/clients-default.png" title="'. __( 'Logo 3', 'mooveit_lite' ) .'" alt="'. __( 'Logo 3', 'mooveit_lite' ) .'" />';
-				echo '<img src="'. get_template_directory_uri() .'/images/clients-default.png" title="'. __( 'Logo 4', 'mooveit_lite' ) .'" alt="'. __( 'Logo 4', 'mooveit_lite' ) .'" />';
-				echo '<img src="'. get_template_directory_uri() .'/images/clients-default.png" title="'. __( 'Logo 5', 'mooveit_lite' ) .'" alt="'. __( 'Logo 5', 'mooveit_lite' ) .'" />';
-				echo '<img src="'. get_template_directory_uri() .'/images/clients-default.png" title="'. __( 'Logo 6', 'mooveit_lite' ) .'" alt="'. __( 'Logo 6', 'mooveit_lite' ) .'" />';
-
-			}
-			?>
-		</div><!--/.our-clients-->
-	</section><!--/.content-->
 </div><!--/.wrap-->
 <?php get_footer(); ?>

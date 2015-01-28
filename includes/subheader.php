@@ -5,7 +5,7 @@
  *	@package ThemeIsle
  */
 
-if ( is_home() ) {
+if ( is_home() || is_front_page() ) {
 	if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
 		$subheader_id = 'subheader';
 	} else {
@@ -18,7 +18,7 @@ if ( is_home() ) {
 <section id="<?php echo $subheader_id; ?>" class="cf">
 	<div class="subheader-wrap cf">
 		<?php
-		if ( is_home() ) {
+		if ( is_home() || is_front_page() ) {
 
 			if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
 				echo '<div class="subheader-background">';
@@ -78,7 +78,7 @@ if ( is_home() ) {
 			?>
 		</nav>
 		<?php
-		if ( is_home() ) {
+		if ( is_home() || is_front_page() ) {
 
 			if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
 
