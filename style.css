@@ -3,7 +3,7 @@ Theme Name: Mooveit Lite
 Theme URI: https://themeisle.com/themes/mooveit-lite
 Author: ThemeIsle
 Author URI: https://themeisle.com
-Description: Mooveit Lite is free moving company WordPress theme.The responsive design is perfect for any kind of business, online store, portfolio or personal site. We built Virtue with a powerful options panel where you can set things like your home layout, sliders,  and completely customize your look without writing any CSS.This theme out-of-the-box plays nicely with Breadcrumb NavXT, WP-PageNavi, Contact Form 7 and other popular plugins. Theme is translation ready and can be easily translated in Portuguese, French, German, Spanish, Italian, 
+Description: Mooveit Lite is free moving company WordPress theme.The responsive design is perfect for any kind of business, online store, portfolio or personal site. We built Virtue with a powerful options panel where you can set things like your home layout, sliders,  and completely customize your look without writing any CSS.This theme out-of-the-box plays nicely with Breadcrumb NavXT, WP-PageNavi, Contact Form 7 and other popular plugins. Theme is translation ready and can be easily translated in Portuguese, French, German, Spanish, Italian,
 License: GNU General Public License version 3
 License URI: license.txt
 Tags: white, yellow, light, two-columns, right-sidebar, custom-menu, featured-images, sticky-post, translation-ready
@@ -1447,7 +1447,7 @@ footer {
 
 #latest-posts .latest-posts {
   width: 100%;
-  margin-top: 60px;
+  margin: 60px 0;
 }
 
 #latest-posts .latest-posts .latest-post {
@@ -1502,6 +1502,8 @@ footer {
 
 #latest-posts .latest-posts .latest-post .latest-post-entry {
   width: 100%;
+  line-height: 16px;
+  font-family: "Source SAns Pro", sans-serif;
   font-weight: 300;
   color: #406185;
 }
