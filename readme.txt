@@ -20,7 +20,12 @@ The exceptions to this license are as follows:
     License under GPL-2.0 or later license.
 
 * Icomoon
-	Copyright (C) IcoMoon App (http://icomoon.io/) & Keyamoon
+	We used this icons:
+		- YouTube;
+		- Facebook;
+		- Google+;
+		- Twitter.
+	Copyright (C) Free IcoMoon App (http://icomoon.io/) & Keyamoon
 	License – GPL
 
 
