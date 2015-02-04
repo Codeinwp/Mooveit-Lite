@@ -13,31 +13,6 @@ require_once( 'includes/tgm-plugin-activation/tgm-plugin-activation.php' );
 if ( ! isset( $content_width ) ) $content_width = 634;
 
 /**
- *  WP Title
- */
-function mooviet_lite_wp_title( $title, $sep ) {
-    global $paged, $page;
-
-    if ( is_feed() )
-        return $title;
-
-    // Add the site name.
-    $title .= get_bloginfo( 'name' );
-
-    // Add the site description for the home/front page.
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
-        $title = "$title $sep $site_description";
-
-    // Add a page number if necessary.
-    if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'mooveit_lite' ), max( $paged, $page ) );
-
-    return $title;
-}
-add_filter( 'wp_title', 'mooviet_lite_wp_title', 10, 2 );
-
-/**
  *  Render Title
  */
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
