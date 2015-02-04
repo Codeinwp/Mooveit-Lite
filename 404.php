@@ -10,29 +10,23 @@ get_header();
 	<div class="blog-title">
 		<h3>
 			<?php
-			if ( get_theme_mod( 'mooveit_lite_404_title' ) ) {
-				echo esc_attr( get_theme_mod( 'mooveit_lite_404_title' ) );
-			} else {
-				echo __( '404 Error', 'mooveit_lite' );
+			if ( get_theme_mod( 'mooveit_lite_404_title', 'Error' ) ) {
+				echo esc_attr( get_theme_mod( 'mooveit_lite_404_title', 'Error' ) );
 			}
 			?>
 		</h3>
 	</div><!--/.blog-title-->
 	<div class="error-subtitle">
 		<?php
-		if ( get_theme_mod( 'mooveit_lite_404_subtitle' ) ) {
-			echo esc_attr( get_theme_mod( 'mooveit_lite_404_subtitle' ) );
-		} else {
-			echo __( 'The page does not exist', 'mooveit_lite' );
+		if ( get_theme_mod( 'mooveit_lite_404_subtitle', 'The page you were looking for was not found.' ) ) {
+			echo esc_attr( get_theme_mod( 'mooveit_lite_404_subtitle', 'The page you were looking for was not found.' ) );
 		}
 		?>
 	</div><!--/.404-subtitle-->
 	<div class="error-entry">
 		<?php
-		if ( get_theme_mod( 'mooveit_lite_404_content' ) ) {
-			echo get_theme_mod( 'mooveit_lite_404_content' );
-		} else {
-			echo __( 'Oops, I screwed up and you discovered my fatal flaw. Well, we\'re not all perfect, but we try.  Can you try this again or maybe visit our <a title="'. bloginfo( 'name' ) .'" href="'. esc_url( home_url() ) .'">Home Page</a> to start fresh.  We\'ll do better next time.', 'mooveit_lite' );
+		if ( get_theme_mod( 'mooveit_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">home page</a>.' ) ) {
+			echo get_theme_mod( 'mooveit_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">home page</a>.' );
 		}
 		?>
 	</div><!--/.error-entry-->
