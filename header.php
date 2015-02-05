@@ -41,16 +41,16 @@
 					echo '</a><!--/.no-logo-box-->';
 				}
 
-				if ( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) { ?>
+				if ( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) { ?>
 
 					<div class="call-us-box">
 						<?php
-						if ( get_theme_mod( 'mooveit_lite_header_title' ) ) {
-	    					echo '<span>'. esc_attr( get_theme_mod( 'mooveit_lite_header_title' ) ) .'</span>';
+						if ( get_theme_mod( 'mooveit_lite_general_header_title', 'Call us now' ) ) {
+	    					echo '<span>'. esc_attr( get_theme_mod( 'mooveit_lite_general_header_title', 'Call us now' ) ) .'</span>';
 	    				}
 
-	    				if ( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) {
-	    					echo '<a href="tel:'. get_theme_mod( 'mooveit_lite_header_subtitle' ) .'" title="Tel: '. esc_attr( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) .'">'. esc_attr( get_theme_mod( 'mooveit_lite_header_subtitle' ) ) .'</a>';
+	    				if ( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) {
+	    					echo '<a href="tel:'. get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) .'" title="Tel: '. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'">'. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'</a>';
 	    				}
 						?>
 					</div><!--/.call-us-box-->
