@@ -11,11 +11,11 @@ get_header();
 if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	if ( is_page_template( 'page-blog.php' ) ) {
-		include( 'page-blog.php' );
-	} else if ( is_page_template( 'page-contact.php' ) ) {
-		include( 'page-contact.php' );
+		get_template_part( 'page-blog' );
+	} else if ( is_page_template( 'page-contact' ) ) {
+		get_template_part( 'page-contact' );
 	} else {
-		include( 'page.php' );
+		get_template_part( 'page' );
 	}
 
 } else { ?>
