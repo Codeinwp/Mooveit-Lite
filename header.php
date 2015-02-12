@@ -50,7 +50,7 @@
 	    				}
 
 	    				if ( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) {
-	    					echo '<a href="tel:'. get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) .'" title="Tel: '. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'">'. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'</a>';
+	    					echo '<a href="tel:'. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'" title="Tel: '. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'">'. esc_attr( get_theme_mod( 'mooveit_lite_general_header_telephonenumber', '+1 234 546 545' ) ) .'</a>';
 	    				}
 						?>
 					</div><!--/.call-us-box-->

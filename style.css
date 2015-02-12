@@ -3,7 +3,7 @@ Theme Name: Mooveit Lite
 Theme URI: https://themeisle.com/themes/mooveit-lite
 Author: ThemeIsle
 Author URI: https://themeisle.com
-Description: Mooveit Lite is free moving company WordPress theme.The responsive design is perfect for any kind of business, online store, portfolio or personal site. We built Virtue with a powerful options panel where you can set things like your home layout, sliders,  and completely customize your look without writing any CSS.This theme out-of-the-box plays nicely with Breadcrumb NavXT, WP-PageNavi, Contact Form 7 and other popular plugins. Theme is translation ready and can be easily translated in Portuguese, French, German, Spanish, Italian,
+Description: Mooveit Lite is free moving company WordPress theme.The responsive design is perfect for any kind of business, online store, portfolio or personal site. We built Mooveit Lite with a powerful options panel where you can set things like your home layout, sliders,  and completely customize your look without writing any CSS.This theme out-of-the-box plays nicely with Breadcrumb NavXT, WP-PageNavi, Contact Form 7 and other popular plugins. Theme is translation ready and can be easily translated in Portuguese, French, German, Spanish, Italian,
 License: GNU General Public License version 3
 License URI: license.txt
 Tags: white, yellow, light, two-columns, right-sidebar, custom-menu, featured-images, sticky-post, translation-ready
@@ -1138,19 +1138,14 @@ footer {
 .footer-two {
   width: 100%;
   background: #061a31;
-}
-
-.footer-two p {
   line-height: 30px;
-  display: block;
-  color: #b3bec9;
-  float: left;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   font-size: 10px;
+  color: #b3bec9;
 }
 
-.footer-two p a {
+.footer-two a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -1160,8 +1155,16 @@ footer {
   text-decoration: none;
 }
 
-.footer-two p a:hover {
+.footer-two a:hover {
   color: #fcd53a;
+}
+
+.footer-two .footer-left {
+  float: left;
+}
+
+.footer-two .footer-right {
+  float: right;
 }
 
 /**

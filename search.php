@@ -42,8 +42,8 @@ get_header();
 								<?php echo the_time( get_option( 'date_format' ) ); ?>
 							</li><!--/li .calendar-icon-->
 							<li class="comments-icon">
-								<a href="<?php the_permalink(); ?>#comments" title="<?php comments_number( 'No Comments', 'One Comment', '% Comments' ); ?>">
-									<?php comments_number( 'No Comments', 'One Comment', '% Comments' ); ?>
+								<a href="<?php the_permalink(); ?>#comments" title="<?php comments_number( __( 'No Comments', 'mooveit_lite' ), __( 'One Comment', 'mooveit_lite' ), __( '% Comments', 'mooveit_lite' ) ); ?>">
+									<?php comments_number( __( 'No Comments', 'mooveit_lite' ), __( 'One Comment', 'mooveit_lite' ), __( '% Comments', 'mooveit_lite' ) ); ?>
 								</a><!--/a-->
 							</li><!--/li .comments-icon-->
 							<li class="category-icon">
