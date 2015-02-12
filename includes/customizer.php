@@ -162,7 +162,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 
 			// Copyright
 			$wp_customize->add_setting( 'mooveit_lite_general_subheader_copyright', array(
-                'default'           => __( 'Copyright', 'mooveit_lite' ),
+                'default'           => __( 'Copyright &copy; ThemeIsle.', 'mooveit_lite' ),
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
                 'transport'         => 'refresh',

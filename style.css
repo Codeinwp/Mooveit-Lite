@@ -1138,19 +1138,14 @@ footer {
 .footer-two {
   width: 100%;
   background: #061a31;
-}
-
-.footer-two p {
   line-height: 30px;
-  display: block;
-  color: #b3bec9;
-  float: left;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   font-size: 10px;
+  color: #b3bec9;
 }
 
-.footer-two p a {
+.footer-two a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -1160,8 +1155,16 @@ footer {
   text-decoration: none;
 }
 
-.footer-two p a:hover {
+.footer-two a:hover {
   color: #fcd53a;
+}
+
+.footer-two .footer-left {
+  float: left;
+}
+
+.footer-two .footer-right {
+  float: right;
 }
 
 /**

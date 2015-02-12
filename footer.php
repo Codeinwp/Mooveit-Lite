@@ -20,8 +20,12 @@
 	</div><!--/.footer-one .cf-->
 	<div class="footer-two cf">
 		<div class="wrap">
-			<p>
-				<?php echo esc_textarea( get_theme_mod( 'mooveit_lite_general_subheader_copyright', 'Copyright' ) ); ?> &copy; <a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a> | Proudly powered by <a href="http://www.wordpress.org" title="WordPress" target="_blank">WordPress</a>.
+			<div class="footer-left">
+				<?php echo get_theme_mod( 'mooveit_lite_general_subheader_copyright', 'Copyright &copy; ThemeIsle.' ); ?>
+			</div><!--/.footer-left-->
+			<div class="footer-right">
+				<a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="nofollow"><?php bloginfo( 'name' ); ?></a> | Proudly powered by <a href="http://www.wordpress.org" title="WordPress" target="_blank" rel="nofollow">WordPress</a>
+			</div><!--/.footer-right-->
 		</div><!--/.wrap-->
 	</div><!--/.footer-two-->
 </footer><!--/footer-->
