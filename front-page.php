@@ -108,44 +108,54 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			</p>
 		</article><!--/#content-article-->
 	</div><!--/.wrap-->
-	<div class="wrap">
-		<div id="latest-posts">
-			<div class="title-border">
-				<?php
-				if ( get_theme_mod( 'mooveit_lite_frontpage_latestnews_title', 'Latest News' ) ) {
-					echo '<h3>'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_latestnews_title', 'Latest News' ) ) .'</h3>';
-				}
-				?>
-			</div><!--/.title-border-->
-			<div class="latest-posts cf">
-				<?php
-				$args = array (
-					'post_type'	=> 'post',
-				);
-				$wp_query = new WP_Query( $args );
+	<?php
+	if ( !get_theme_mod( 'mooveit_lite_frontpage_latestnews_hide' ) ) {
 
-				if ( $wp_query->have_posts() ) {
-					while ( $wp_query->have_posts() ) {
-						$wp_query->the_post(); ?>
+		$args = array (
+			'post_type'              => 'post',
+		);
 
-						<div id="post-<?php the_ID(); ?>" <?php post_class( 'latest-post' ); ?>>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="latest-post-title">
-								<?php the_title(); ?>
-							</a><!--/.latest-post-title-->
-							<div class="latest-post-entry">
-								<?php the_excerpt(); ?>
-							</div><!--/.latest-post-entry-->
-						</div><!--/.latest-post-->
+		$wp_query = new WP_Query( $args );
 
-					<?php }
-				} else {
-					echo __( 'No posts found.', 'mooveit_lite' );
-				}
-				wp_reset_postdata();
-				?>
-			</div><!--/.latest-posts.cf-->
-		</div><!--/#latest-posts-->
-	</div><!--/.wrap-->
+		if ( $wp_query->have_posts() ) { ?>
+
+			<div class="wrap">
+				<div id="latest-posts">
+					<div class="title-border">
+						<?php
+						if ( get_theme_mod( 'mooveit_lite_frontpage_latestnews_title', 'Latest News' ) ) {
+							echo '<h3>'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_latestnews_title', 'Latest News' ) ) .'</h3>';
+						}
+						?>
+					</div><!--/.title-border-->
+					<div class="latest-posts cf">
+
+						<?php
+						while ( $wp_query->have_posts() ) {
+							$wp_query->the_post(); ?>
+
+							<div id="post-<?php the_ID(); ?>" <?php post_class( 'latest-post' ); ?>>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="latest-post-title">
+									<?php the_title(); ?>
+								</a><!--/.latest-post-title-->
+								<div class="latest-post-entry">
+									<?php the_excerpt(); ?>
+								</div><!--/.latest-post-entry-->
+							</div><!--/.latest-post-->
+
+						<?php }
+						?>
+
+					</div><!--/.latest-posts.cf-->
+				</div><!--/#latest-posts-->
+			</div><!--/.wrap-->
+
+		<?php }
+
+		wp_reset_postdata();
+
+	}
+	?>
 
 <?php }
 get_footer(); ?>

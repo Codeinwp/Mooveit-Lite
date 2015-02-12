@@ -181,7 +181,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 
 			// Copyright
 			$wp_customize->add_setting( 'mooveit_lite_general_subheader_copyright', array(
-                'default'           => __( 'Copyright &copy; ThemeIsle.', 'mooveit_lite' ),
+                'default'           => __( 'Copyright ThemeIsle.', 'mooveit_lite' ),
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
                 'transport'         => 'refresh',
@@ -488,6 +488,20 @@ function mooveit_lite_customizer( $wp_customize ) {
 				'settings'  => 'mooveit_lite_frontpage_latestnews_title',
 				'label'     => __( 'Title:', 'mooveit_lite' ),
 				'type'      => 'text'
+			) );
+
+			// Hide
+			$wp_customize->add_setting( 'mooveit_lite_frontpage_latestnews_hide', array(
+				'capability'        => 'edit_theme_options',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'mooveit_lite_sanitize_callback_text',
+			) );
+			$wp_customize->add_control( 'mooveit_lite_frontpage_latestnews_hide', array(
+				'priority'  => 2,
+				'section'   => 'mooveit_lite_frontpage_latestnews_section',
+				'settings'  => 'mooveit_lite_frontpage_latestnews_hide',
+				'label'     => __( 'Hide this section?', 'mooveit_lite' ),
+				'type'      => 'checkbox'
 			) );
 
 	if ( $bloginfo_version >= 4.0 ) {
