@@ -10,6 +10,8 @@ function mooveit_lite_customizer( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'refresh';
 	$wp_customize->get_setting( 'background_color' )->transport = 'refresh';
 
+	$bloginfo_version = get_bloginfo( 'version' );
+
 	/**
 	 *	Mooveit Lite Note
 	 */
@@ -19,18 +21,34 @@ function mooveit_lite_customizer( $wp_customize ) {
         }
     }
 
-	/**
-	 *	General Panel
-	 */
-	$wp_customize->add_panel( 'mooveit_lite_general_panel', array(
-		'priority'          => 200,
-		'capability'        => 'edit_theme_options',
-		'theme_supports'    => '',
-		'title'             => __( 'General', 'mooveit_lite' ),
-		'description'       => __( 'General settings.', 'mooveit_lite' ),
-	) );
+    if ( $bloginfo_version >= 4.0 ) {
 
-		/**
+    	/**
+		 *	General Panel
+		 */
+		$wp_customize->add_panel( 'mooveit_lite_general_panel', array(
+			'priority'          => 200,
+			'capability'        => 'edit_theme_options',
+			'theme_supports'    => '',
+			'title'             => __( 'General', 'mooveit_lite' ),
+			'description'       => __( 'General settings.', 'mooveit_lite' ),
+		) );
+
+			/**
+			 *	Header Section
+			 */
+			$wp_customize->add_section( 'mooveit_lite_general_header_section', array(
+				'priority'          => 1,
+				'capability'        => 'edit_theme_options',
+				'theme_supports'    => '',
+				'title'             => __( 'Header', 'mooveit_lite' ),
+				'description'       => __( 'Settings for header.', 'mooveit_lite' ),
+				'panel'             => 'mooveit_lite_general_panel',
+			) );
+
+    } else {
+
+    	/**
 		 *	Header Section
 		 */
 		$wp_customize->add_section( 'mooveit_lite_general_header_section', array(
@@ -38,9 +56,10 @@ function mooveit_lite_customizer( $wp_customize ) {
 			'capability'        => 'edit_theme_options',
 			'theme_supports'    => '',
 			'title'             => __( 'Header', 'mooveit_lite' ),
-			'description'       => __( 'Settings for header.', 'mooveit_lite' ),
-			'panel'             => 'mooveit_lite_general_panel',
+			'description'       => __( 'Settings for header.', 'mooveit_lite' )
 		) );
+
+    }
 
 			// Title
 			$wp_customize->add_setting( 'mooveit_lite_general_header_title', array(
@@ -175,18 +194,34 @@ function mooveit_lite_customizer( $wp_customize ) {
                 'label'         => __( 'Copyright:', 'mooveit_lite' )
             ) );
 
-    /**
-     *	Frontpage Panel
-     */
-	$wp_customize->add_panel( 'mooveit_lite_frontpage_panel', array(
-		'priority'          => 250,
-		'capability'        => 'edit_theme_options',
-		'theme_supports'    => '',
-		'title'             => __( 'Frontpage', 'mooveit_lite' ),
-		'description'       => __( 'Settings for frontpage.', 'mooveit_lite' ),
-	) );
+    if ( $bloginfo_version >= 4.0 ) {
 
-		/**
+    	/**
+	     *	Frontpage Panel
+	     */
+		$wp_customize->add_panel( 'mooveit_lite_frontpage_panel', array(
+			'priority'          => 250,
+			'capability'        => 'edit_theme_options',
+			'theme_supports'    => '',
+			'title'             => __( 'Frontpage', 'mooveit_lite' ),
+			'description'       => __( 'Settings for frontpage.', 'mooveit_lite' ),
+		) );
+
+			/**
+			 *	Subheader Section
+			 */
+			$wp_customize->add_section( 'mooveit_lite_frontpage_subheader_section', array(
+				'priority'          => 1,
+				'capability'        => 'edit_theme_options',
+				'theme_supports'    => '',
+				'title'             => __( 'Subheader', 'mooveit_lite' ),
+				'description'       => __( 'Settings for subheader.', 'mooveit_lite' ),
+				'panel'             => 'mooveit_lite_frontpage_panel',
+			) );
+
+    } else {
+
+    	/**
 		 *	Subheader Section
 		 */
 		$wp_customize->add_section( 'mooveit_lite_frontpage_subheader_section', array(
@@ -195,8 +230,9 @@ function mooveit_lite_customizer( $wp_customize ) {
 			'theme_supports'    => '',
 			'title'             => __( 'Subheader', 'mooveit_lite' ),
 			'description'       => __( 'Settings for subheader.', 'mooveit_lite' ),
-			'panel'             => 'mooveit_lite_frontpage_panel',
 		) );
+
+    }
 
 			// Article title
 			$wp_customize->add_setting( 'mooveit_lite_frontpage_subheader_articletitle', array(
@@ -454,16 +490,32 @@ function mooveit_lite_customizer( $wp_customize ) {
 				'type'      => 'text'
 			) );
 
-	/**
-	 *	Contact Page Section
-	 */
-	$wp_customize->add_panel( 'mooveit_lite_contactpage_panel', array(
-		'priority'          => 300,
-		'capability'        => 'edit_theme_options',
-		'theme_supports'    => '',
-		'title'             => __( 'Contact Page', 'mooveit_lite' ),
-		'description'       => __( 'Settings for contact page.', 'mooveit_lite' ),
-	) );
+	if ( $bloginfo_version >= 4.0 ) {
+
+		/**
+		 *	Contact Page Section
+		 */
+		$wp_customize->add_panel( 'mooveit_lite_contactpage_panel', array(
+			'priority'          => 300,
+			'capability'        => 'edit_theme_options',
+			'theme_supports'    => '',
+			'title'             => __( 'Contact Page', 'mooveit_lite' ),
+			'description'       => __( 'Settings for contact page.', 'mooveit_lite' ),
+		) );
+
+			/**
+			 *	Map Section
+			 */
+			$wp_customize->add_section( 'mooveit_lite_contactpage_map_section', array(
+				'priority'          => 1,
+				'capability'        => 'edit_theme_options',
+				'theme_supports'    => '',
+				'title'             => __( 'Map', 'mooveit_lite' ),
+				'description'       => __( 'Settings for map.', 'mooveit_lite' ),
+				'panel'             => 'mooveit_lite_contactpage_panel',
+			) );
+
+	} else {
 
 		/**
 		 *	Map Section
@@ -474,8 +526,9 @@ function mooveit_lite_customizer( $wp_customize ) {
 			'theme_supports'    => '',
 			'title'             => __( 'Map', 'mooveit_lite' ),
 			'description'       => __( 'Settings for map.', 'mooveit_lite' ),
-			'panel'             => 'mooveit_lite_contactpage_panel',
 		) );
+
+	}
 
 			// Title
 			$wp_customize->add_setting( 'mooveit_lite_contactpage_map_title', array(
@@ -498,7 +551,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 				'sanitize_callback'	=> 'esc_textarea'
 			) );
 			$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'mooveit_lite_contactpage_map_code', array(
-			            'label' 	=> __( 'Code:', 'ti' ),
+			            'label' 	=> __( 'Code:', 'mooveit_lite' ),
 			            'section' 	=> 'mooveit_lite_contactpage_map_section',
 			            'settings' 	=> 'mooveit_lite_contactpage_map_code',
 			            'priority' 	=> 2
@@ -538,7 +591,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 				'sanitize_callback'	=> 'esc_textarea'
 			) );
 			$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'mooveit_lite_contactpage_contactinfo_address', array(
-			            'label' 	=> __( 'Address:', 'ti' ),
+			            'label' 	=> __( 'Address:', 'mooveit_lite' ),
 			            'section' 	=> 'mooveit_lite_contactpage_contactinfo_section',
 			            'settings' 	=> 'mooveit_lite_contactpage_contactinfo_address',
 			            'priority' 	=> 2
@@ -677,7 +730,7 @@ function mooveit_lite_customizer( $wp_customize ) {
 
 			// Entry
 			$wp_customize->add_setting( 'mooveit_lite_404_entry', array(
-                'default'           => __( 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">home page</a>.', 'denta_lite' ),
+                'default'           => __( 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'mooveit_lite' ) .'">home page</a>.', 'mooveit_lite' ),
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
                 'transport'         => 'refresh',
@@ -688,7 +741,7 @@ function mooveit_lite_customizer( $wp_customize ) {
                 'priority'      => 3,
                 'section'       => 'mooveit_lite_404_section',
                 'settings'      => 'mooveit_lite_404_entry',
-                'label'         => __( 'Entry:', 'denta_lite' )
+                'label'         => __( 'Entry:', 'mooveit_lite' )
             ) );
 
 }
