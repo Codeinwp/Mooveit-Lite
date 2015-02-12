@@ -5,7 +5,7 @@
  *	@package ThemeIsle
  */
 
-if ( is_home() || is_front_page() ) {
+if ( is_home() ) {
 	if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
 		$subheader_id = 'subheader';
 	} else {
@@ -18,7 +18,7 @@ if ( is_home() || is_front_page() ) {
 <section id="<?php echo $subheader_id; ?>" class="cf">
 	<div class="subheader-wrap cf">
 		<?php
-		if ( is_home() || is_front_page() ) {
+		if ( is_home() ) {
 
 			if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
 				echo '<div class="subheader-background">';
@@ -78,7 +78,7 @@ if ( is_home() || is_front_page() ) {
 			?>
 		</nav>
 		<?php
-		if ( is_home() || is_front_page() ) {
+		if ( is_home() ) {
 
 			if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
 
