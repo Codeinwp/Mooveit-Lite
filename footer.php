@@ -24,7 +24,7 @@
 				<?php echo get_theme_mod( 'mooveit_lite_general_subheader_copyright', 'Copyright &copy; ThemeIsle.' ); ?>
 			</div><!--/.footer-left-->
 			<div class="footer-right">
-				<a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="nofollow"><?php bloginfo( 'name' ); ?></a> <?php _e( '| Proudly powered by', 'mooviet_lite' ); ?> <a href="http://www.wordpress.org" title="<?php _e( 'WordPress', 'mooviet_lite' ); ?>" target="_blank" rel="nofollow"><?php _e( 'WordPress', 'mooviet_lite' ); ?></a>
+				 <a href="https://themeisle.com/themes/mooveit-lite/" target="_blank" rel="nofollow"><?php _e( 'Mooveit Lite', 'denta_lite' ); ?></a><?php _e( ' Proudly powered by', 'mooviet_lite' ); ?> <a href="http://www.wordpress.org" title="<?php _e( 'WordPress', 'mooviet_lite' ); ?>" target="_blank" rel="nofollow"><?php _e( 'WordPress', 'mooviet_lite' ); ?></a>
 			</div><!--/.footer-right-->
 		</div><!--/.wrap-->
 	</div><!--/.footer-two-->
