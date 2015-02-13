@@ -2,10 +2,9 @@
  *	Ready Function
  */
 jQuery(document).ready(function($) {
-
 	// Responsive Menu
 	$('.openresponsivemenu').click(function() {
-		$('ul').toggleClass("responsivemenu");
+		$('.navigation ul').toggleClass("responsivemenu");
 	});
 
 	// Masonry

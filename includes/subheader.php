@@ -5,8 +5,8 @@
  *	@package ThemeIsle
  */
 
-if ( is_home() || is_front_page() ) {
-	if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
+if ( is_home() ) {
+	if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
 		$subheader_id = 'subheader';
 	} else {
 		$subheader_id = 'no-subheader';
@@ -18,9 +18,9 @@ if ( is_home() || is_front_page() ) {
 <section id="<?php echo $subheader_id; ?>" class="cf">
 	<div class="subheader-wrap cf">
 		<?php
-		if ( is_home() || is_front_page() ) {
+		if ( is_home() ) {
 
-			if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
+			if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
 				echo '<div class="subheader-background">';
 				echo '</div>';
 			}
@@ -29,7 +29,7 @@ if ( is_home() || is_front_page() ) {
 		<nav>
 			<?php
 
-			if ( ( get_theme_mod( 'mooveit_lite_header_youtube' ) || get_theme_mod( 'mooveit_lite_header_facebook' ) || get_theme_mod( 'mooveit_lite_header_googleplus' ) || get_theme_mod( 'mooveit_lite_header_twitter' ) ) == NULL ) { ?>
+			if ( ( get_theme_mod( 'mooveit_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) || get_theme_mod( 'mooveit_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) || get_theme_mod( 'mooveit_lite_general_socialslink_googlepluslink', 'http://www.google.com' ) || get_theme_mod( 'mooveit_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) == NULL ) { ?>
 
 				<style>
 					.navigation {
@@ -52,24 +52,24 @@ if ( is_home() || is_front_page() ) {
 				)
 			);
 
-			if ( get_theme_mod( 'mooveit_lite_header_youtube' ) || get_theme_mod( 'mooveit_lite_header_facebook' ) || get_theme_mod( 'mooveit_lite_header_googleplus' ) || get_theme_mod( 'mooveit_lite_header_twitter' ) ) { ?>
+			if ( get_theme_mod( 'mooveit_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) || get_theme_mod( 'mooveit_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) || get_theme_mod( 'mooveit_lite_general_socialslink_googlepluslink', 'http://www.google.com' ) || get_theme_mod( 'mooveit_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) { ?>
 
 				<div class="socials-box">
 					<?php
-					if ( get_theme_mod( 'mooveit_lite_header_youtube' ) ) {
-						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_youtube' ) ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" class="youtube-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) {
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'mooveit_lite' ) .'" target="_blank" class="youtube-icon"></a>';
 					}
 
-					if ( get_theme_mod( 'mooveit_lite_header_facebook' ) ) {
-						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_facebook' ) ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" class="facebook-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) {
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'mooveit_lite' ) .'" target="_blank" class="facebook-icon"></a>';
 					}
 
-					if ( get_theme_mod( 'mooveit_lite_header_googleplus' ) ) {
-						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_googleplus' ) ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" class="googleplus-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_general_socialslink_googlepluslink', 'http://www.google.com' ) ) {
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_general_socialslink_googlepluslink', 'http://www.google.com' ) ) .'" title="'. __( 'Google+', 'mooveit_lite' ) .'" target="_blank" class="googleplus-icon"></a>';
 					}
 
-					if ( get_theme_mod( 'mooveit_lite_header_twitter' ) ) {
-						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_twitter' ) ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" class="twitter-icon"></a>';
+					if ( get_theme_mod( 'mooveit_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) {
+						echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'mooveit_lite' ) .'" target="_blank" class="twitter-icon"></a>';
 					}
 					?>
 				</div><!--/.socials-box-->
@@ -78,22 +78,22 @@ if ( is_home() || is_front_page() ) {
 			?>
 		</nav>
 		<?php
-		if ( is_home() || is_front_page() ) {
+		if ( is_home() ) {
 
-			if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) || get_theme_mod( 'mooveit_lite_header_articleentry' ) || get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
+			if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) || get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
 
 				echo '<div class="subheader-wrap-content">';
 
-				if ( get_theme_mod( 'mooveit_lite_header_articletitle' ) ) {
-					echo '<h3>'. get_theme_mod( 'mooveit_lite_header_articletitle' ) .'</h3>';
+				if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) ) {
+					echo '<h3>'. esc_attr( get_theme_mod( 'mooveit_lite_frontpage_subheader_articletitle', 'Finibus Bonorum et Malorum' ) ) .'</h3>';
 				}
 
-				if ( get_theme_mod( 'mooveit_lite_header_articleentry' ) ) {
-					echo '<p>'. get_theme_mod( 'mooveit_lite_header_articleentry' ) .'</p>';
+				if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) ) {
+					echo '<p>'. esc_textarea( get_theme_mod( 'mooveit_lite_frontpage_subheader_articleentry', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.' ) ) .'</p>';
 				}
 
-				if ( get_theme_mod( 'mooveit_lite_header_articlelink' ) ) {
-					echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_header_articlelink' ) ) .'" title="'. __( 'Read More', 'mooveit_lite' ) .'">'. __( 'Read more', 'mooveit_lite' ) .'</a>';
+				if ( get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) {
+					echo '<a href="'. esc_url( get_theme_mod( 'mooveit_lite_frontpage_subheader_articlebuttonlink', '#' ) ) .'" title="'. __( 'Read More', 'mooveit_lite' ) .'">'. __( 'Read more', 'mooveit_lite' ) .'</a>';
 				}
 
 				echo '</div><!--/.subheader-wrap-content-->';

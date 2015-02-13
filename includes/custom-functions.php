@@ -54,7 +54,7 @@ function mooveit_comments( $comment, $args, $depth ) {
                 <?php endif; ?>
         	</div><!--/div .comments-list-left-->
         	<div class="comments-list-meta">
-        		<span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" title="<?php comment_time( 'c' ); ?>"><?php printf( __( '%1$s at %2$s', 'shape' ), get_comment_date(), get_comment_time() ); ?></a></span>
+        		<span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" title="<?php comment_time( 'c' ); ?>"><?php printf( __( '%1$s at %2$s', 'mooveit_lite' ), get_comment_date(), get_comment_time() ); ?></a></span>
         		<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
         	</div><!--/div .comments-list-meta-->
         </article><!--/article .comments-list .cf-->
