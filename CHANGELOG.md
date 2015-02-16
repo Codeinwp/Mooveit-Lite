@@ -5,6 +5,14 @@
  Changes: 
 
 
+ * Fixed customizer missing sanitization
+
+
+### 1.0.5 - 16/02/2015
+
+ Changes: 
+
+
  * Fixed wp.org review, footer copyright, functions prefixes, text domains, unascaped variables
  * Increased version
 
