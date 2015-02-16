@@ -66,7 +66,7 @@ get_header();
 												</b>
 												<?php
 												if ( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_telephone', '+1 342 434 234' ) != false ) { ?>
-													<a href="tel:<?php echo get_theme_mod( 'mooveit_lite_contactpage_contactinfo_telephone', '+1 342 434 234' ); ?>" title="<?php echo esc_attr( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_telephone', '+1 342 434 234' ) ) ?>">
+													<a href="tel:<?php echo esc_attr(get_theme_mod( 'mooveit_lite_contactpage_contactinfo_telephone', '+1 342 434 234' )); ?>" title="<?php echo esc_attr( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_telephone', '+1 342 434 234' ) ) ?>">
 														<?php echo esc_attr( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_telephone', '+1 342 434 234' ) ) ?>
 													</a>
 												<?php }
@@ -85,7 +85,7 @@ get_header();
 												</b>
 												<?php
 												if ( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_email', 'contact@yourwebsite.com' ) != false ) { ?>
-													<a href="mailto:<?php echo get_theme_mod( 'mooveit_lite_contactpage_contactinfo_email', 'contact@yourwebsite.com' ); ?>" title="<?php echo esc_attr( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_email', 'contact@yourwebsite.com' ) ); ?>">
+													<a href="mailto:<?php echo esc_attr(get_theme_mod( 'mooveit_lite_contactpage_contactinfo_email', 'contact@yourwebsite.com' )); ?>" title="<?php echo esc_attr( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_email', 'contact@yourwebsite.com' ) ); ?>">
 														<?php echo esc_attr( get_theme_mod( 'mooveit_lite_contactpage_contactinfo_email', 'contact@yourwebsite.com' ) ) ?>
 													</a>
 												<?php }

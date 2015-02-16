@@ -25,8 +25,8 @@ get_header();
 	</div><!--/.404-subtitle-->
 	<div class="error-entry">
 		<?php
-		if ( get_theme_mod( 'mooveit_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">home page</a>.' ) ) {
-			echo get_theme_mod( 'mooveit_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">home page</a>.' );
+		if ( get_theme_mod( 'mooveit_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'mooveit_lite' ) .'">home page</a>.' ) ) {
+			echo get_theme_mod( 'mooveit_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'mooveit_lite' ) .'">home page</a>.' );
 		}
 		?>
 	</div><!--/.error-entry-->
