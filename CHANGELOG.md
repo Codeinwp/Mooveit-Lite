@@ -1,5 +1,13 @@
 
 
+### 1.0.6 - 30/03/2015
+
+ Changes: 
+
+
+ * Revert "This fixes #4"
+
+
 ### 1.0.6 - 26/02/2015
 
  Changes: 
