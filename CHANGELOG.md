@@ -1,5 +1,13 @@
 
 
+### 1.0.7 - 30/03/2015
+
+ Changes: 
+
+
+ * Fixed #99, added Leave a review button in customizer
+
+
 ### 1.0.6 - 30/03/2015
 
  Changes: 
