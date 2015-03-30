@@ -5,6 +5,20 @@
  Changes: 
 
 
+ * This fixes #4 again
+
+screenshot
+readme
+ * Merge pull request #112 from DragosBubu/development
+
+Development
+
+
+### 1.0.6 - 30/03/2015
+
+ Changes: 
+
+
  * Revert "This fixes #4"
 
 
