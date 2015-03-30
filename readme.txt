@@ -1,4 +1,4 @@
-﻿=== Mooveit Lite ===
+=== Mooveit Lite ===
 Contributors:		codeinwp
 Tags:				white, light, two-columns, right-sidebar, custom-header, custom-menu, featured-images, rtl-language-support, sticky-post, translation-ready, blue, white, responsive-layout, fixed-layout,theme-options, threaded-comments
 Requires at least:	3.3.0
@@ -58,11 +58,10 @@ The exceptions to this license are as follows:
 	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+	
 * Screenshot image
 
 	https://download.unsplash.com/photo-1416339684178-3a239570f315
-
 
 * js/jquery.matchHeight.js
 	Copyright (c) 2014 liabru
