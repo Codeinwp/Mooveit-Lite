@@ -791,7 +791,8 @@ function mooveit_lite_registers() {
 	wp_enqueue_script( 'mooveit_lite_customizer_script' );
 	wp_localize_script( 'mooveit_lite_customizer_script', 'mooveit_lite_buttons', array(
 		'doc'			=> __( 'Documentation', 'mooveit_lite' ),
-		'pro'			=> __( 'View PRO Version', 'mooveit_lite' )
+		'pro'			=> __( 'View PRO Version', 'mooveit_lite' ),
+		'review'        => __( 'Leave a review (it will help us)', 'mooveit_lite' )
 	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'mooveit_lite_registers' );
