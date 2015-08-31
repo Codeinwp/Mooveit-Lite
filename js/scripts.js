@@ -4,7 +4,7 @@
 jQuery(document).ready(function($) {
 	// Responsive Menu
 	$('.openresponsivemenu').click(function() {
-		$('.navigation ul').toggleClass("responsivemenu");
+		$('ul.navigation').toggleClass("responsivemenu");
 	});
 
 	// Masonry
