@@ -1,5 +1,14 @@
 
 
+### 1.0.8 - 31/08/2015
+
+ Changes: 
+
+
+ * Fixed mobile dropdown menu
+ * Update style.css
+
+
 ### 1.0.7 - 30/03/2015
 
  Changes: 
