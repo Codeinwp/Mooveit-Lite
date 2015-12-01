@@ -1654,6 +1654,10 @@ footer {
   display: inline;
 }
 
+.content-left article .post-entry p {
+  word-break: normal;
+}
+
 .content-left article .post-entry {
   width: 100%;
   margin-top: 15px;
