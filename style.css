@@ -2392,6 +2392,10 @@ footer {
   height: auto;
 }
 
+#single .single-entry p {
+  word-break: initial;
+}
+
 #single .alignright {
   float: right;
 }
